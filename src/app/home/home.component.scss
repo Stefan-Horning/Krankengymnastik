@@ -115,17 +115,22 @@
         border-top-right-radius: 10px;
     }
     .nameBox{
+        margin-top: -20px;
+        background-image: url('../../assets/img/Name-Banner.png');
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
-        background-color: rgb(108, 158, 95);
+        height: 150px;
+        //background-color: rgb(108, 158, 95);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
         span{
-            color: white;
-            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            font-size: 32px;
             font-weight: 500;
         }
     }

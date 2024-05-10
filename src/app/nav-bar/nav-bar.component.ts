@@ -11,8 +11,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavBarComponent {
   isMenuOpen:boolean = false;
+  isMenuChecked:boolean = false;
 
   switch() {
+    this.isMenuChecked = !this.isMenuChecked;
     this.isMenuOpen = !this.isMenuOpen;
   }
 

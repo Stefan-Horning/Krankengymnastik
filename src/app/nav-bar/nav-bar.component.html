@@ -3,7 +3,7 @@
     <div class="nav-mobile" (click)="switch(); $event.stopPropagation();">
         <div id="webapp_cover">
             <div id="menu_button">
-                <input type="checkbox" id="menu_checkbox">
+                <input type="checkbox" id="menu_checkbox" [checked]="isMenuChecked">
                 <label for="menu_checkbox" id="menu_label" (click)="$event.stopPropagation();">
                     <div  id="menu_text_bar"></div>
                 </label>
@@ -12,11 +12,11 @@
     </div>
 </div>
 
-<div *ngIf="isMenuOpen" class="mobile-menu">
+<div (click)="switch(); $event.stopPropagation();" *ngIf="isMenuOpen" class="mobile-menu">
     <div>
-        <a routerLink="/" [routerLinkActive]="'active-link'">Home</a>
-        <a routerLink="/" href="">Leistungen</a>
-        <a routerLink="/" href="">Team</a>
-        <a routerLink="/" href="">Kontakt</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'">Home</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Leistungen</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Team</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Kontakt</a>
     </div>
 </div>
