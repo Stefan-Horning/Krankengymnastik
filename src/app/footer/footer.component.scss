@@ -16,6 +16,7 @@
 
     .contact-bar{
         padding: 16px;
+        padding-top: 0;
         display: flex;
         justify-content: start;
         align-items: start;
@@ -33,7 +34,7 @@
             font-weight: 200;
             min-width: 200px;
             display: flex;
-            padding-top: 8px;
+            padding-top: 0px;
             padding-bottom: 8px;
             align-items: center;
 
