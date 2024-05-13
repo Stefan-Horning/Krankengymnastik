@@ -1,8 +1,57 @@
 .footer{
-    border-top: 2px solid rgb(108, 158, 95);;
-    img{
-        width: 25px;
-        height: 25px;
-        object-fit: cover;
+    border-top: 2px solid rgb(108, 158, 95);
+
+    .logo{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 70%;
+            object-fit: cover;
+        };
+    }
+
+    .contact-bar{
+        padding: 16px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        div{
+            width: 100%;
+            font-weight: 200;
+            min-width: 200px;
+            display: flex;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            align-items: center;
+
+            img{
+                width: 25px;
+                height: 25px;
+                margin-right: 20px;
+            }
+            span{
+                padding: 8px;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(108, 158, 95);
+                &:hover{
+                    color: #637e5d;
+                }
+            }
+        }
     }
 }
