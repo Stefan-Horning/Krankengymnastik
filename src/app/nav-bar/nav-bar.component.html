@@ -14,9 +14,9 @@
 
 <div (click)="switch(); $event.stopPropagation();" *ngIf="isMenuOpen" class="mobile-menu">
     <div>
-        <a (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'">Home</a>
-        <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Leistungen</a>
-        <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Team</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/home" [routerLinkActive]="'active-link'">Home</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
+        <a (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>
         <a (click)="switch(); $event.stopPropagation();" routerLink="/" href="">Kontakt</a>
     </div>
 </div>

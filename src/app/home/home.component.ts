@@ -1,14 +1,16 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { ContactPreComponent } from '../contact-pre/contact-pre.component';
+import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ContactPreComponent,StefanPreComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   images: string[] = [
     'assets/img/Physiotherapie.jpeg',
     'assets/img/Osteopathie.jpeg',
@@ -24,7 +26,7 @@ export class HomeComponent {
   text:string[] = [
     "Physiotherapie",
     "Osteopathie",
-    "Naturheilpraxis",
+    "Heilkunde",
   ]
 
   imagesstyle:string[] = [
@@ -36,6 +38,11 @@ export class HomeComponent {
   private intervalId: any;
 
   constructor(private el: ElementRef,private scroller: ViewportScroller) {}
+
+  ngOnInit(): void {
+      window.scrollTo(0, 0);
+    
+  }
 
   ngAfterViewInit(): void {
     this.intervalId = setInterval(() => {

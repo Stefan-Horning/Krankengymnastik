@@ -1,13 +1,4 @@
-.welcomeText{
-    margin-top: -10px;
-    padding: 24px;
-    padding-bottom: 32px;
-    padding-top: 0;
-    .textbox{
-        
-        font-weight: 200;
-    }
-}
+@import '../app.component.scss';
 
 h3{
     margin-bottom: 20px;
@@ -20,6 +11,7 @@ h3{
         color: rgb(100, 101, 100);
     }
     span{
+        font-weight: 500;
         background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
         -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
         background-clip: text; /* Standard property for compatibility */
@@ -27,24 +19,14 @@ h3{
     }
 }
 
-.TeamButton{
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a{
-        border-radius: 10px;
-        cursor: pointer;
-        color: white;
-        padding: 8px;
-        background-color: rgb(108, 158, 95);
-
-        &:hover{
-            background-color: rgb(109, 143, 101);
-        }
-    }
+.overdiv{
     
+    padding: 24px;
+    padding-top: 90px;
+    .textbox{
+        
+        font-weight: 200;
+    }
 }
 
 .imageDiv{
@@ -64,7 +46,7 @@ h3{
 
 .nameBox{
     transform: translateY(-20px);
-    background-image: url('../assets/img/Name-Banner.png');
+    background-image: url('../../assets/img/Name-Banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,3 +64,4 @@ h3{
         font-weight: 500;
     }
 }
+
