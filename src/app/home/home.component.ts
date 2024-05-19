@@ -2,11 +2,12 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { ContactPreComponent } from '../contact-pre/contact-pre.component';
 import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,ContactPreComponent,StefanPreComponent],
+  imports: [CommonModule,ContactPreComponent,StefanPreComponent,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
