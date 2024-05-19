@@ -1,1 +1,35 @@
 @import '../app.component.scss';
+
+.overdiv{
+    padding-top: 90px;
+}
+
+.card{
+    margin-top: 40px;
+    b{
+        font-weight: 400;
+    }
+    text-align: center;
+    border: 3px solid rgb(152, 195, 137);
+    border-radius: 15px;
+    img{
+        max-width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    h4{
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 16px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    div{
+        padding: 8px; 
+    }
+
+    span{
+        font-weight: 200;
+    }
+}

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactPreComponent } from '../contact-pre/contact-pre.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [],
+  imports: [ContactPreComponent,RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })

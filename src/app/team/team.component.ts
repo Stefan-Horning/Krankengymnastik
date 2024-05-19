@@ -24,11 +24,11 @@ export class TeamComponent implements OnInit{
     window.scrollTo(0, 0);
   }
   names: string[] = [
-    'Julia',
-    'Nicolas',
-    'Philip',
+    'Julia Mainz',
+    'Nicolas Mainz',
+    'Philip Heinrichs',
     'Siglinde',
-    'Ulla',
+    'Ulla Mügge',
     'Simone',
   ];
   
