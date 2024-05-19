@@ -1,0 +1,9 @@
+<div class="overdiv">
+    <h3>Unser <span>Team</span></h3>
+    <app-stefan-pre></app-stefan-pre>
+    <div *ngFor="let image of images; let i = index" class="imageDiv">
+        <img src="{{image}}" alt="">
+        <div class="nameBox" style="margin-top: -30px;"><span>{{names[i]}}</span></div>
+    </div>
+</div>
+<app-contact-pre></app-contact-pre>
