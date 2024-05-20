@@ -134,9 +134,9 @@ body {
 }
 //------------------------ Button --------------------------------//
 
-
-.nav-div{
-    z-index: 5;
+.resp-div{
+  background-color: rgba(250, 250, 250, 0.899);
+  z-index: 5;
     position: fixed;
     top: 0;
     left: 0;
@@ -145,9 +145,25 @@ body {
     padding-bottom: 10px;
     height: 50px;
     display: flex;
+    justify-content: center;
+
+}
+
+.nav-div{
+  max-width: 1800px;
+    z-index: 5;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    height: 50px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(250, 250, 250, 0.899);
+    //background-color: rgba(250, 250, 250, 0.899);
+
 
     img{
         cursor: pointer;
@@ -186,8 +202,37 @@ body {
             }
         }
     }
+
+  @media (min-width: 900px){
+    display: none;
+    
+  }
 }
 
 .active-link{
     color: rgb(108, 158, 95) !important;
+}
+
+
+
+// Responsive //
+
+.destop-bar{
+  a{
+    padding: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    margin-right: 10px;
+  }
+  @media (max-width: 899px){
+    display: none;
+  }
+
+}
+
+.nav-mobile{
+  @media (min-width: 900px){
+    display: none;
+  }
 }
