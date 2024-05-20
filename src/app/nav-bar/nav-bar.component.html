@@ -1,16 +1,25 @@
-<div class="nav-div">
-    <img routerLink="/home" src="./assets/img/osteomedica-logo.png" alt="">
-    <div class="nav-mobile" (click)="switch(); $event.stopPropagation();">
-        <div id="webapp_cover">
-            <div id="menu_button">
-                <input type="checkbox" id="menu_checkbox" [checked]="isMenuChecked">
-                <label for="menu_checkbox" id="menu_label" (click)="$event.stopPropagation();">
-                    <div  id="menu_text_bar"></div>
-                </label>
+<div class="resp-div">
+    <div class="nav-div">
+        <img routerLink="/home" src="./assets/img/osteomedica-logo.png" alt="">
+        <div class="nav-mobile" (click)="switch(); $event.stopPropagation();">
+            <div id="webapp_cover">
+                <div id="menu_button">
+                    <input type="checkbox" id="menu_checkbox" [checked]="isMenuChecked">
+                    <label for="menu_checkbox" id="menu_label" (click)="$event.stopPropagation();">
+                        <div  id="menu_text_bar"></div>
+                    </label>
+                </div>
             </div>
+        </div>
+        <div class="destop-bar">
+            <a (click)="switch(); $event.stopPropagation();" routerLink="/home" [routerLinkActive]="'active-link'">Home</a>
+            <a (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
+            <a (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>
+            <a (click)="switch(); $event.stopPropagation();" routerLink="/kontakt" [routerLinkActive]="'active-link'" href="">Kontakt</a>
         </div>
     </div>
 </div>
+
 
 <div (click)="switch(); $event.stopPropagation();" *ngIf="isMenuOpen" class="mobile-menu">
     <div>
