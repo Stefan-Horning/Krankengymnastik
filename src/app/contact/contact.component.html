@@ -1,0 +1,65 @@
+<div style="padding-top: 90px;" class="welcomeText">
+    <h3>Zum <b><span>Kontakt</span></b></h3>
+    <div class="imageDiv">
+        <img src="./assets/img/people/Siglinde.jpg" alt="">
+        <div style="font-weight: 200;">
+            <span>Fragen? Anregungen? Wir sind hier, um zu helfen!</span>
+            <br>
+            <span>Ruf uns an unter <a style="color: rgb(108, 158, 95);" href="tel:021519424700">02151-9424700</a> oder schreib uns über unser Kontaktformular.</span>
+            <br>
+            <span>Wir freuen uns darauf, von dir zu hören!</span>
+            <br>
+        </div>
+    </div>
+    <div>
+        <h1>Kontaktieren Sie Uns</h1>
+        <span class="send" *ngIf="send">Nachricht gesendet</span>
+        <form (ngSubmit)="sendMail()" [formGroup]="contactForm">
+            <div>
+              <input
+                autocomplete="off"
+                formControlName="nameInput"
+                required
+                minlength="2"
+                type="text"
+                placeholder="Ihren Namen"
+              />
+              <!-- <span *ngIf="contactForm.controls['nameInput'].invalid && (contactForm.controls['nameInput'].dirty || contactForm.controls['nameInput'].touched)">
+                Bitte geben Sie Ihren Namen an
+              </span> -->
+            </div>
+            <div>
+              <input
+                autocomplete="off"
+                formControlName="emailInput"
+                required
+                type="email"
+                placeholder="Ihre E-Mail"
+              />
+              <!-- <span *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+                Bitte geben Sie Ihre E-Mail an
+              </span> -->
+            </div>
+            <div>
+              <textarea
+                autocomplete="off"
+                formControlName="massageInput"
+                required
+                minlength="5"
+                placeholder="Ihre Nachricht an mich"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <!-- <span *ngIf="contactForm.controls['massageInput'].invalid && (contactForm.controls['massageInput'].dirty || contactForm.controls['massageInput'].touched)">
+                Mindestlänge 5 Zeichen
+              </span> -->
+            </div>
+            <div>
+              <button [disabled]="!contactForm.valid">Nachricht senden</button>
+            </div>
+          </form>
+    </div>
+</div>
+<div style="height: 1000px;">
+
+</div>
