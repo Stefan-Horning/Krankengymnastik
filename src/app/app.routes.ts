@@ -5,11 +5,13 @@ import { ServicesComponent } from './services/services.component';
 import { PhysiotherapieComponent } from './physiotherapie/physiotherapie.component';
 import { OsteopathieComponent } from './osteopathie/osteopathie.component';
 import { HeilkundeComponent } from './heilkunde/heilkunde.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'team', component: TeamComponent},
     { path: 'leistungen' , component:ServicesComponent},
+    { path: 'kontakt' , component:ContactComponent},
     { path: 'physiotherapie' , component:PhysiotherapieComponent},
     { path: 'osteopathie' , component:OsteopathieComponent},
     { path: 'heilkunde' , component:HeilkundeComponent},
