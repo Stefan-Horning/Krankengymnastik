@@ -12,7 +12,6 @@
         </div>
     </div>
     <div>
-        <h1>Kontaktieren Sie Uns</h1>
         <span class="send" *ngIf="send">Nachricht gesendet</span>
         <form (ngSubmit)="sendMail()" [formGroup]="contactForm">
             <div>
@@ -46,7 +45,7 @@
                 formControlName="massageInput"
                 required
                 minlength="5"
-                placeholder="Ihre Nachricht an mich"
+                placeholder="Ihre Nachricht an uns"
                 cols="30"
                 rows="10"
               ></textarea>
@@ -59,7 +58,4 @@
             </div>
           </form>
     </div>
-</div>
-<div style="height: 1000px;">
-
 </div>
