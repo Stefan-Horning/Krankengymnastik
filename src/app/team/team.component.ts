@@ -27,9 +27,9 @@ export class TeamComponent implements OnInit{
     'Julia Mainz',
     'Nicolas Mainz',
     'Philip Heinrichs',
-    'Siglinde',
+    'Siglinde Kämper',
     'Ulla Mügge',
-    'Simone',
+    'Simone Kirches',
   ];
   
 }
