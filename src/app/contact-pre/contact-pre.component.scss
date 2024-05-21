@@ -1,1 +1,20 @@
-@import '../app.component.scss'
+@import '../app.component.scss';
+
+img{
+    max-width: 340px !important;
+    margin-top: 16px;
+    max-width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text{
+    @media (min-width: 800px){
+        max-width: 50%;
+        padding-left: 40px;
+        display: flex;
+        justify-content: center;
+        
+    }
+}

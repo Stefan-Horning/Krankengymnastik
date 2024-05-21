@@ -13,91 +13,98 @@
             </div>
         </div>
     </div>
-    <div class="welcomeText">
-        <h3>Herzlich Willkommen bei <b><span>Osteo</span>medica</b></h3>
-        <span class="textbox">
-            Bei Osteomedica, der Praxis für Osteopathie, Physiotherapie und Heilkunde im Herzen von St.Tönis, ist es unser besonderes Anliegen den Menschen nach einem ganzheitlichen Ansatz zu behandeln und seine Beschwerden auf allen Ebenen zu lindern.
-        </span>
-        <br>
-        <br>
-        <span class="textbox">
-            Um den Prozess der Heilung beim Patienten umfassend zu aktivieren, nutzen wir Untersuchungs- und Behandlungstechniken aus dem Bereich der Osteopathie sowie der Naturheilkunde und nehmen auch Rücksicht auf die psychoemotionale und seelische Komponente über Behandlungsansätze aus dem Bereich der energetischen Heilweisen.
-        </span>
-    </div>
-    <div class="welcomeText">
-        <h3>Ihr <b><span>Ansprechpartner</span></b></h3>
-        <app-stefan-pre></app-stefan-pre>
-        <div class="TeamButton">
-            <a routerLink="/team">Erfahre mehr über uns</a>
+    <div style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <div class="welcomeText">
+            <h3>Herzlich Willkommen bei <b><span>Osteo</span>medica</b></h3>
+            <span class="textbox">
+                Bei Osteomedica, der Praxis für Osteopathie, Physiotherapie und Heilkunde im Herzen von St.Tönis, ist es unser besonderes Anliegen den Menschen nach einem ganzheitlichen Ansatz zu behandeln und seine Beschwerden auf allen Ebenen zu lindern.
+            </span>
+            <br>
+            <br>
+            <span class="textbox">
+                Um den Prozess der Heilung beim Patienten umfassend zu aktivieren, nutzen wir Untersuchungs- und Behandlungstechniken aus dem Bereich der Osteopathie sowie der Naturheilkunde und nehmen auch Rücksicht auf die psychoemotionale und seelische Komponente über Behandlungsansätze aus dem Bereich der energetischen Heilweisen.
+            </span>
         </div>
-    </div>
-    <div class="welcomeText">
-        <h3>Unsere <b><span>Leistungen</span></b></h3>
-        <div class="Main-picture-container">
-            <img *ngFor="let image of images; let i = index" 
-                 [src]="image" 
-                 [alt]="'Image ' + i" 
-                 [class.active]="i === currentImageIndex" 
-                 [class.right]="imagesstyle[i] == 'right'"
-                 (load)="nextImage();"
-            />
+        <div  class="welcomeText" style=" margin-top: 30x; ">
+            <h3 >Ihr <b><span>Ansprechpartner</span></b></h3>
+        </div>
+        
+        <div class="welcomeText">
+            <app-stefan-pre></app-stefan-pre>
+            <div class="TeamButton">
+                <a routerLink="/team">Erfahre mehr über uns</a>
+            </div>
+        </div>
+        <div class="welcomeText">
+            <h3>Unsere <b><span>Leistungen</span></b></h3>
+        </div>
+        <div class="welcomeText" style="width: calc(100% - 48px);display: flex; justify-content: center; align-items: center; flex-direction: column;">
             
-        </div>
-        <div class="nameBoxForposition"><span>{{currentText}}</span></div>
-        <!-- <div class="wrapper">  // Ab 700px Breite
-            <div class="container">
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" class="card">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="description">
-                            <h4>Winter</h4>
-                            <p>Winter has so much to offer -
-                             creative activities</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c2" >
-                <label for="c2" class="card">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="description">
-                            <h4>Digital Technology</h4>
-                            <p>Gets better every day -
-                             stay tuned</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c3" >
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h4>Globalization</h4>
-                            <p>Help people all over the world</p>
-                        </div>
-                    </div>
-                </label>
+            <div class="Main-picture-container">
+                <img *ngFor="let image of images; let i = index"  
+                     [src]="image" 
+                     [alt]="'Image ' + i" 
+                     [class.active]="i === currentImageIndex" 
+                     [class.right]="imagesstyle[i] == 'right'"
+                     (load)="nextImage();"
+                />
+                
             </div>
-        </div> -->
-        <div class="TeamButton">
-            <a routerLink="/leistungen">Erfahre mehr darüber</a>
-        </div>
-    </div>
-    <app-contact-pre></app-contact-pre>
-    <div class="welcomeText">
-        <h3>Unsere <b><span>Öffnungszeiten</span></b></h3>
-        <div class="imageDiv">
-            <img src="../../assets/img/people/Simone.jpg" alt="">
-            <div style="font-weight: 200; text-align: center; padding-top: 20px;">
-                <Span><span style="color: rgb(108, 158, 95);">Montag</span> von 08:00 bis 19:00 Uhr</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Dinstag</span> von 08:00 bis 18:00 Uhr</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Mittwoch</span> von 08:00 bis 19:00 Uhr</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Donnerstag</span> von 08:00 bis 18:00 Uhr</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Freitag</span> von 08:00 bis 12:30 Uhr</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Samstag</span> & <span style="color: rgb(108, 158, 95);">Sonntag</span> geschlossen</Span><br>
-                <Span><span style="color: rgb(108, 158, 95);">Feiertage</span> geschlossen</Span><br>
+            <div class="nameBoxForposition"><span>{{currentText}}</span></div>
+            <div class="wrapper"> 
+                <div class="container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card" (click)="c1()">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4>Osteopathie</h4>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for="c2" class="card" (click)="c2()">
+                        <div class="row">
+                            <div class="icon">2</div>
+                            <div class="description">
+                                <h4>Physiotherapie</h4>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for="c3" class="card" (click)="c3()">
+                        <div class="row">
+                            <div class="icon">3</div>
+                            <div class="description">
+                                <h4>Heilkunde</h4>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="TeamButton">
+                <a routerLink="/leistungen">Erfahre mehr darüber</a>
             </div>
         </div>
+        
+        <app-contact-pre></app-contact-pre>
+        <div class="welcomeText" >
+            <h3>Unsere <b><span>Öffnungszeiten</span></b></h3>
+            <div class="imageDiv">
+                <img class="openOursImage" src="../../assets/img/people/Simone.jpg" alt="">
+                <div style="font-weight: 200; text-align: center; padding-top: 20px;">
+                    <Span><span style="color: rgb(108, 158, 95);">Montag</span> von 08:00 bis 19:00 Uhr</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Dinstag</span> von 08:00 bis 18:00 Uhr</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Mittwoch</span> von 08:00 bis 19:00 Uhr</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Donnerstag</span> von 08:00 bis 18:00 Uhr</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Freitag</span> von 08:00 bis 12:30 Uhr</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Samstag</span> & <span style="color: rgb(108, 158, 95);">Sonntag</span> geschlossen</Span><br>
+                    <Span><span style="color: rgb(108, 158, 95);">Feiertage</span> geschlossen</Span><br>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
+    
 </div>

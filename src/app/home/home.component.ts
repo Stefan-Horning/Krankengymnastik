@@ -2,7 +2,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { ContactPreComponent } from '../contact-pre/contact-pre.component';
 import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -31,14 +31,12 @@ export class HomeComponent implements OnInit{
   ]
 
   imagesstyle:string[] = [
-    'center',
-    'center',
-    'left',
+
   ]
   currentImageIndex: number = 0;
   private intervalId: any;
 
-  constructor(private el: ElementRef,private scroller: ViewportScroller) {}
+  constructor(private el: ElementRef,private scroller: ViewportScroller,private router: Router) {}
 
   ngOnInit(): void {
       window.scrollTo(0, 0);
@@ -58,5 +56,26 @@ export class HomeComponent implements OnInit{
   nextImage(): void {
     this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
     this.setText(this.currentImageIndex);
+  }
+
+  c1() {
+    const inputElement = document.getElementById('c1') as HTMLInputElement;
+    if (inputElement.checked) {
+      this.router.navigate(['/osteopathie']);
+    }
+  }
+
+  c2() {
+    const inputElement = document.getElementById('c2') as HTMLInputElement;
+    if (inputElement.checked) {
+      this.router.navigate(['/physiotherapie']);
+    }
+  }
+
+  c3() {
+    const inputElement = document.getElementById('c3') as HTMLInputElement;
+    if (inputElement.checked) {
+      this.router.navigate(['/heilkunde']);
+    }
   }
 }

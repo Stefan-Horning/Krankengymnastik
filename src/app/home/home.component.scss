@@ -2,6 +2,7 @@
 
 .overdiv{
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 .firstView{
@@ -23,9 +24,16 @@
         color: white;
         font-size: 2rem;
         font-weight: 700;
+        display: flex;
+        justify-content: center;
         text-align: center;
 
+        @media (min-width: 530px){
+            top: 70%;
+        }
+
         p{
+            max-width: 730px;
             line-height: 45px;
         }
 
@@ -81,7 +89,7 @@
     z-index: 3;
     position: relative;
     width: 100%;
-    transform: translateY(-20px);
+    transform: translateY(-60px);
     background-image: url('../../assets/img/Name-Banner.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,12 +101,21 @@
     //background-color: rgb(108, 158, 95);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
+    max-width: 340px ;
     span{
         transition: opacity 1.5s ease !important;
         color: rgb(0, 0, 0);
         font-size: 28px;
         font-weight: 500;
+    }
+
+    @media (min-width:700px){
+        display: none;
+    }
+
+    @media (min-width:400px){
+        background-size: cover;
+        max-width: 340px !important;
     }
 }
 
@@ -127,21 +144,36 @@
 
 
 // --------------------------------------------------//
-/*
+
 .wrapper {
+    @media (max-width:699px){
+        display: none;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
     max-width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    img{
+        object-fit: cover;
+    }
 }
 
 .container {
-    height: 400px;
+    height: 250px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
+    max-width: 800px;
+
+    @media (min-width:1000px){
+        height: 350px;
+    }
 }
 
 .card {
@@ -169,6 +201,7 @@
     color: white;
     border-radius: 50%;
     width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,8 +221,11 @@
     transition: all .3s ease;
 }
 
-.description p {
-    color: #b0b0ba;
+.description  {
+    color: #ffffff;
+    letter-spacing: 5px;
+    text-shadow:2px 2px 2px rgb(108, 158, 95);
+    font-size: 22px;
     padding-top: 5px;
 }
 
@@ -222,16 +258,25 @@ input:checked + label .description {
     background-image: url('../../assets/img/Naturheilpraxis.jpeg');
     background-size: cover;
 }
-  */
+  
 
 
   .Main-picture-container{
+
+    
     background-color: rgb(255, 255, 255);
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    z-index: 2 !important;
-   max-height: 187px;
+        position: relative;
+        width: 100%;
+        max-height: 187px;
+        overflow: hidden;
+        z-index: 2 !important;
+         //min-width: 330px;
+        max-width: 339px;
+        display: flex;
+        justify-content: center;
+   @media (min-width:700px){
+    display: none;
+   }
   
     img {
     z-index: 2 !important;
@@ -240,7 +285,8 @@ input:checked + label .description {
       left: 0;
       width: 100%;
       height: 100%;
-      
+      min-width: 330px;
+      max-width: 339px;
       object-fit: cover;
       opacity: 0;
       transition: opacity 1s ease;
@@ -253,7 +299,30 @@ input:checked + label .description {
       }
 
         @media (max-width:1000px) {
-          object-fit: contain;
+          
+        }
+    }
+
+    @media (max-width:420px) {
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        z-index: 2 !important;
+       max-height: 187px;
+    
+       @media (min-width:700px){
+        display: none;
+       }
+      
+        img {
+        z-index: 2 !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
     }
 
@@ -286,4 +355,25 @@ input:checked + label .description {
 
 .right{
   object-position: top right !important;
+}
+
+
+.openOursImage{
+        max-width: 340px !important;
+        margin-top: 16px;
+        max-width: 100%;
+        object-fit: contain;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+}
+
+app-contact-pre{
+    width: 100%;
+    max-width: 1800px;
+
+    div{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
 }
