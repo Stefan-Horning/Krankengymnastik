@@ -10,11 +10,42 @@ img{
 }
 
 .text{
+    text-align: center;
     @media (min-width: 800px){
+        text-align: left;
         max-width: 50%;
         padding-left: 40px;
         display: flex;
+        justify-content: flex-start;
+        align-items: flex-start !important;
+    }
+}
+
+.imageDiv{
+    @media (min-width: 800px) {
+        display: flex;
+        justify-content: space-around;
+
+        div{
+            max-width: 50%;
+        }
+    }
+
+    div{
+        width: 100%;
+        max-height: min-content;
+        display: flex;
         justify-content: center;
-        
+        align-items: center;
+        flex-direction: column ;
+    }
+    img{
+        max-width: 100%;
+        max-width: 340px ;
+        margin-top: 16px;
+  
+        object-fit: contain;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 }
