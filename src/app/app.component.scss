@@ -115,3 +115,14 @@ h3{
         font-weight: 500;
     }
 }
+
+app-contact-pre{
+    width: 100%;
+    max-width: 1800px;
+
+    div{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+}

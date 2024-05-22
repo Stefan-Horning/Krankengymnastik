@@ -29,39 +29,14 @@ h3{
     }
 }
 
-.imageDiv{
-    div{
-        max-height: min-content;
-        display: flex;
-        flex-direction: column  ;
-    }
-    img{
-        margin-top: 16px;
-        max-width: 100%;
-        object-fit: contain;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-}
-
-.nameBox{
-    transform: translateY(-20px);
-    background-image: url('../../assets/img/Name-Banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.wrap-div{
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 150px;
-    //background-color: rgb(108, 158, 95);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    flex-wrap: wrap;
 
-    span{
-        color: rgb(0, 0, 0);
-        font-size: 28px;
-        font-weight: 500;
+    div{
+        margin: 25px;
     }
 }
 

@@ -196,7 +196,7 @@
 }
 
 .card > .row > .icon {
-    background: #223;
+    //background: #223;
     color: white;
     border-radius: 50%;
     width: 50px;
@@ -366,13 +366,3 @@ input:checked + label .description {
         border-top-right-radius: 10px;
 }
 
-app-contact-pre{
-    width: 100%;
-    max-width: 1800px;
-
-    div{
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
-    }
-}

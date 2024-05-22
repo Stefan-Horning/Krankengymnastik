@@ -1,10 +1,16 @@
 @import '../app.component.scss';
 
 .overdiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: 90px;
 }
 
 .card{
+    max-width: 430px;
     margin-top: 40px;
     b{
         font-weight: 400;
@@ -32,4 +38,15 @@
     span{
         font-weight: 200;
     }
+
+    @media (min-width: 800px){
+        margin: 40px;
+    }
+}
+
+.wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
