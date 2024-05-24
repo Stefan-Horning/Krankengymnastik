@@ -1,0 +1,11 @@
+@import '../app.component.scss';
+
+.div-overdiv{
+    a{
+        color: rgb(24, 24, 239);
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}

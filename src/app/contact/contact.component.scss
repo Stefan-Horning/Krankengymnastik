@@ -12,16 +12,17 @@ form{
         margin-left: 0 !important;
         margin-right: 0 !important;
         padding: 8px;
+        display: flex;
+            justify-content: center;
+            align-items: center;
 
         span{
             display: none;
         }
-        @media (max-width:1000px) {
-            max-width: 90% !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        // @media (max-width:1000px) {
+        //     max-width: 90% !important;
+        //     
+        // }
     }
 
     input{

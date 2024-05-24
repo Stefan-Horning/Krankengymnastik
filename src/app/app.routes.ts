@@ -6,6 +6,8 @@ import { PhysiotherapieComponent } from './physiotherapie/physiotherapie.compone
 import { OsteopathieComponent } from './osteopathie/osteopathie.component';
 import { HeilkundeComponent } from './heilkunde/heilkunde.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -15,5 +17,7 @@ export const routes: Routes = [
     { path: 'physiotherapie' , component:PhysiotherapieComponent},
     { path: 'osteopathie' , component:OsteopathieComponent},
     { path: 'heilkunde' , component:HeilkundeComponent},
+    { path: 'impressum' , component:ImprintComponent},
+    { path: 'datenschutzerklaerung' , component:DatenschutzComponent},
     { path: '**', redirectTo: 'home' }
 ];
