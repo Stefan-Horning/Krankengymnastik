@@ -20,4 +20,7 @@ export class StefanPreComponent {
       AOS.refresh();
     },500);
   }
+
+  
 }
+
