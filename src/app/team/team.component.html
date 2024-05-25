@@ -2,11 +2,10 @@
     <h3>Unser <span>Team</span></h3>
     <app-stefan-pre></app-stefan-pre>
     <div class="wrap-div">
-        <div *ngFor="let image of images; let i = index" class="imageDiv" style="flex-direction: column; max-width: 339px;">
+        <div data-aos="fade-up" *ngFor="let image of images; let i = index" class="imageDiv" style="flex-direction: column; max-width: 339px;">
             <img src="{{image}}" alt="">
             <div class="nameBox" style="margin: 0; margin-top: -10px;"><span>{{names[i]}}</span></div>
         </div>
     </div>
-    
 </div>
 <app-contact-pre></app-contact-pre>
