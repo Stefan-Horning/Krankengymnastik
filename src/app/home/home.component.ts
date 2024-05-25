@@ -3,6 +3,8 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { ContactPreComponent } from '../contact-pre/contact-pre.component';
 import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
 import { Router, RouterLink } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-home',
@@ -38,15 +40,21 @@ export class HomeComponent implements OnInit{
 
   constructor(private el: ElementRef,private scroller: ViewportScroller,private router: Router) {}
 
+
   ngOnInit(): void {
-      window.scrollTo(0, 0);
-    
+    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 550,
+    });
   }
 
   ngAfterViewInit(): void {
     this.intervalId = setInterval(() => {
       this.nextImage();
     }, 4750); 
+    setTimeout(() =>{
+      AOS.refresh();
+    },500);
   }
 
   ngOnDestroy(): void {
