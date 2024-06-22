@@ -1,0 +1,11 @@
+<div class="Main-picture-container">
+    <img *ngFor="let image of images; let i = index"  
+         [src]="image" 
+         [alt]="'Image ' + i" 
+         [class.active]="i === currentImageIndex" 
+         
+         (load)="nextImage();"
+    />
+    
+</div>
+<div class="nameBoxForposition"><span>{{currentText}}</span></div>
