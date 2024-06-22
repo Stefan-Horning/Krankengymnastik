@@ -106,7 +106,10 @@
     max-width: 340px ;
     span{
         transition: opacity 1.5s ease !important;
-        color: rgb(0, 0, 0);
+        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+        -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
+        background-clip: text; /* Standard property for compatibility */
+        color: transparent; /* Macht den Text transparent */
         font-size: 28px;
         font-weight: 500;
     }
@@ -375,11 +378,11 @@ input:checked + label .description {
         
         p{
             max-width: 80%;
-            max-width: 800px;
+            max-width: 1000px;
         }
     }
     p{
         max-width: 100%;
-        max-width: 800px;
+        max-width: 1000px;
     }
 }

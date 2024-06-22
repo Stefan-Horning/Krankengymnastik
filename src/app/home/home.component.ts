@@ -5,11 +5,12 @@ import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
 import { Router, RouterLink } from '@angular/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ShowTeamComponent } from '../show-team/show-team.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,ContactPreComponent,StefanPreComponent,RouterLink],
+  imports: [CommonModule,ContactPreComponent,StefanPreComponent,RouterLink,ShowTeamComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

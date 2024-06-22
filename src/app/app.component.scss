@@ -105,13 +105,17 @@ h3{
     max-width: 340px ;
 
 
+
     @media (min-width:400px){
         background-size: cover;
         min-width: 340px !important;
     }
 
     span{
-        color: rgb(0, 0, 0);
+        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+        -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
+        background-clip: text; /* Standard property for compatibility */
+        color: transparent; /* Macht den Text transparent */
         font-size: 28px;
         font-weight: 500;
     }
@@ -127,3 +131,4 @@ app-contact-pre{
         justify-content: space-around;
     }
 }
+
