@@ -263,13 +263,13 @@ input:checked + label .description {
   
 
 
-  .Main-picture-container{
+.Main-picture-container{
 
     
     background-color: rgb(255, 255, 255);
         position: relative;
         width: 100%;
-        max-height: 187px;
+        min-height: 220px;
         overflow: hidden;
         z-index: 2 !important;
          //min-width: 330px;
@@ -295,6 +295,7 @@ input:checked + label .description {
       object-position: top center;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+      min-height: 100px;
   
       &.active {
         opacity: 1;
@@ -329,22 +330,22 @@ input:checked + label .description {
     }
 
 
-    @media (max-width:1000px) {
-      height: 80vh;
+    // @media (max-width:1000px) {
+    //   height: 80vh;
       
-    }
-    @media (max-width:800px) {
-      height: 60vh;
+    // }
+    // @media (max-width:800px) {
+    //   height: 60vh;
       
-    }
+    // }
 
-    @media (max-width:600px) {
-      height: 50vh;
+    // @media (max-width:600px) {
+    //   height: 50vh;
       
-    }
+    // }
 
     @media (max-width:450px) {
-      height: 45vh;
+      height: 100vh;
       
     }
 
