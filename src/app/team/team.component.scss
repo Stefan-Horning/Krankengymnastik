@@ -29,6 +29,22 @@ h3{
     }
 }
 
+.text{
+    @media (min-width: 800px){
+        padding-left: 40px;
+        
+    }
+    width: 100%;
+
+    div{
+        min-width: 100%;
+
+        span{
+            width: 100%;
+        }
+    }
+}
+
 .wrap-div{
     width: 100%;
     display: flex;
@@ -39,4 +55,3 @@ h3{
         margin: 25px;
     }
 }
-
