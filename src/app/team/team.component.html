@@ -1,11 +1,26 @@
 <div class="overdiv">
     <h3>Unser <span>Team</span></h3>
-    <!-- <app-stefan-pre></app-stefan-pre> -->
-    <div class="wrap-div">
-        <div data-aos="fade-up" *ngFor="let image of images; let i = index" class="imageDiv" style="flex-direction: column; max-width: 339px;">
-            <img src="{{image}}" alt="">
-            <div class="nameBox" style="margin: 0; margin-top: -10px;"><span class="nameSpan">{{names[i]}}</span></div>
+    <div *ngFor="let item of text; let i = index" style="padding-top: 25px; padding-bottom: 25px;">
+        <div class="imageDiv" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
+            <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+              <div data-aos="fade-up" style="width: 100%; display: flex; align-items: center; flex-direction: column; max-width: 340px;">
+                <img class="fade show" [src]="'./assets/img/people/' + item.name.split(' ')[0] + '.jpg'" alt="">
+                <div class="nameBox"><span>{{ item.name }}</span></div>
+              </div>
+            </div>
+          
+            <div class="text" style="font-weight: 200; width: 100%;">
+              <h3 style="text-align: left;">{{ item.header }}</h3>
+              <div *ngFor="let training of item.trainings">
+                <span>{{ training }}</span> <br>
+            </div>
         </div>
     </div>
 </div>
-<app-contact-pre></app-contact-pre>
+<div class="wrap-div">
+    <div data-aos="fade-up" *ngFor="let image of images; let i = index" class="imageDiv" style="flex-direction: column; max-width: 339px;">
+        <img src="{{image}}" alt="">
+        <div class="nameBox" style="margin: 0; margin-top: -10px;"><span class="nameSpan">{{names[i]}}</span></div>
+    </div>
+</div>
+<app-contact-pre ></app-contact-pre>
