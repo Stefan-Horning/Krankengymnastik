@@ -1,8 +1,19 @@
 @import '../app.component.scss';
 
+
 .text{
     @media (min-width: 800px){
         padding-left: 40px;
         
     }
+    width: 100%;
+
+    div{
+        min-width: 100%;
+
+        span{
+            width: 100%;
+        }
+    }
 }
+

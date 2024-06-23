@@ -1,41 +1,21 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 @Component({
   selector: 'app-stefan-pre',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './stefan-pre.component.html',
-  styleUrl: './stefan-pre.component.scss'
+  styleUrls: ['./stefan-pre.component.scss']
 })
-export class StefanPreComponent {
-  ngOnInit(): void {
-    AOS.init({
-      duration: 550,
-    });
-  }
-
-  ngAfterViewInit(){
-    setTimeout(() =>{
-      AOS.refresh();
-    },500);
-  }
-
-  images: string[] = [
-    'assets/img/people/Stefan.jpg',
-    'assets/img/people/Nicolas.jpg',
-    'assets/img/people/Julia.jpg',
-    'assets/img/people/Philip.jpg',
-    'assets/img/people/Ulla.jpg',
-    'assets/img/people/Siglinde.jpg',
-    'assets/img/people/Simone.jpg',
-  ];
-  currentImageIndex: number = 0;
-
-  currentText:string = "";
+export class StefanPreComponent implements OnInit, OnDestroy {
+  currentIndex = 0;
   intervalId: any;
+  currentText: string = "";
 
-  text =  [
+  text = [
     {
       name: 'Stefan Paul',
       header: 'Osteopath, Physiotherapeut, Heilpraktiker',
@@ -56,13 +36,11 @@ export class StefanPreComponent {
         'Weiterbildung zum Lymph- und Odemtherapeut nach Asdonk mit Abschluss in 2018'
       ]
     },
-    //'Julia Mainz',
-    
     {
       name: 'Philip Heinrichs',
-      header: 'Phyiotherapeut',
+      header: 'Physiotherapeut',
       trainings: [
-        '2021 Abschluss als staatl. anerkannter Phyiotherapeut an der Schule für Physiotherapie am EVK Düsseldorf',
+        '2021 Abschluss als staatl. anerkannter Physiotherapeut an der Schule für Physiotherapie am EVK Düsseldorf',
         '2019 Kinesiologisches Tapen - Kompaktkurs',
         '2019 Functional Kinetics nach Dr. Klein-Vogelbach an der Uni Basel (Kurse Basic + Status)',
         '2021 Manuelle Lymphdrainage/KPE',
@@ -84,7 +62,41 @@ export class StefanPreComponent {
         'Fortbildung Palliativ Care für Physiotherapeuten 2017',
         'Weitere Fortbildungen in den Bereichen: Medizinische Trainingstherapie, Beckenbodentraining, Vestibulartraining, Akupressur, Fußreflexzonentherapie, Atemtherapie, Kinesiotape',
       ]
-    },
-  ]
-}
+    }
+  ];
 
+  ngOnInit(): void {
+    AOS.init({
+      duration: 550,
+    });
+
+    this.intervalId = setInterval(() => {
+      this.changeIndex();
+    }, 5000);
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  changeIndex() {
+    const imageElement = document.querySelector('.imageDiv img');
+    if (imageElement) {
+      imageElement.classList.remove('show');
+      setTimeout(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.text.length;
+        imageElement.classList.add('show');
+      }, 1000); // Zeit für den Fade-out
+    } else {
+      this.currentIndex = (this.currentIndex + 1) % this.text.length;
+    }
+  }
+}
