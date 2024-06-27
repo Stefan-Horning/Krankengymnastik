@@ -1,9 +1,15 @@
 <div class="welcomeText">
     <h3 style="width: 100%;">Unsere <b><span>Preise</span></b></h3>
     
-    
+    <div class="price-list" style="padding-top: 16px;">
+        <div class="price-item" *ngFor="let item of priceList">
+          <div class="item-description">{{item.description}}</div>
+          <div class="item-price">{{item.price}}</div>
+        </div>
+      </div>
     <div class="TeamButton" style="padding-top: 50px;">
-        <a routerLink="/kontakt">Weiter zum Kontaktformular</a>
+        <a routerLink="/kontakt">Weiter zu den Preisen
+        </a>
     </div>
     
 </div>
