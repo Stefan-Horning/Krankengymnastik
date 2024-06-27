@@ -12,13 +12,21 @@ img{
 .text{
     text-align: center;
     @media (min-width: 800px){
+        width: 100%;
         text-align: left;
-        max-width: 50%;
-        padding-left: 40px;
+        width: 70vw !important;
+        padding-left: 20px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start !important;
     }
+}
+
+.imageDivC{
+    @media (min-width:  1000px) {
+        max-width: 40% !important;
+    }
+  
 }
 
 .imageDiv{
