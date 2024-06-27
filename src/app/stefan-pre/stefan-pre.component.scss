@@ -1,5 +1,10 @@
 @import '../app.component.scss';
 
+.imageDiv{
+    div{
+        width: 50%;
+    }
+}
 
 .text{
     @media (min-width: 800px){

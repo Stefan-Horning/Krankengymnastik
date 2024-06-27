@@ -177,6 +177,12 @@
         height: 350px;
     }
 }
+.imageDivC{
+    @media (min-width:  1000px) {
+        max-width: 40% !important;
+    }
+  
+}
 
 .card {
     width: 80px;
