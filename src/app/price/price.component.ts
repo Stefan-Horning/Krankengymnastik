@@ -1,17 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-price-pre',
+  selector: 'app-price',
   standalone: true,
-  imports: [CommonModule,RouterLink],
-  templateUrl: './price-pre.component.html',
-  styleUrl: './price-pre.component.scss'
+  imports: [CommonModule],
+  templateUrl: './price.component.html',
+  styleUrl: './price.component.scss'
 })
-export class PricePreComponent {
-
-
+export class PriceComponent {
   priceList = [
     { description: 'KG - Krankengymnastik (Termindauer 20 min.)', price: '40,00 €' },
     { description: 'KG - Krankengymnastik (Termindauer 30 min. = 2x 15 min.)', price: '54,00 €' },
@@ -28,6 +25,7 @@ export class PricePreComponent {
     { description: 'Osteopathie (Termindauer 60 min.)', price: '125,00 €' },
     { description: 'Zuzahlung für Osteopathie 30 min. bei KG-Verordnung', price: '38,00 €' },
     { description: 'Zuzahlung für Osteopathie 30 min. bei MT-Verordnung', price: '32,00 €' },
-    { description: 'Ausführlicher Bericht (Arzt/Versicherung)', price: '92,00 €' }
+    { description: 'Ausführlicher Bericht (Arzt/Versicherung)', price: '92,00 €' },
+    { description: '(Stand 02/2024)', price: '' }
   ];
 }
