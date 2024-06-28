@@ -4,10 +4,11 @@ import { ContactPreComponent } from '../contact-pre/contact-pre.component';
 import { StefanPreComponent } from '../stefan-pre/stefan-pre.component';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [CommonModule,ContactPreComponent,StefanPreComponent],
+  imports: [CommonModule,ContactPreComponent,StefanPreComponent,RouterLink],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
   
