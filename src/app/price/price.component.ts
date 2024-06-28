@@ -1,14 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ContactPreComponent } from '../contact-pre/contact-pre.component';
 
 @Component({
   selector: 'app-price',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ContactPreComponent],
   templateUrl: './price.component.html',
   styleUrl: './price.component.scss'
 })
-export class PriceComponent {
+export class PriceComponent implements OnInit{
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
   priceList = [
     { description: 'KG - Krankengymnastik (Termindauer 20 min.)', price: '40,00 €' },
     { description: 'KG - Krankengymnastik (Termindauer 30 min. = 2x 15 min.)', price: '54,00 €' },
