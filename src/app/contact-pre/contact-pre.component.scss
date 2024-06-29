@@ -55,5 +55,11 @@ img{
         object-fit: contain;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+
+        @media (min-width:900px) {
+            max-width: 380px ;
+            height: 280px;
+            object-fit: cover;
+        }
     }
 }
