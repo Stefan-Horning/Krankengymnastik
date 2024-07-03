@@ -19,39 +19,49 @@ export class ContactComponent implements OnInit{
   send:boolean = false;
   name:any;
   email:any;
+  phone:any;
   message:any;
   contactForm = new FormGroup({
     nameInput: new FormControl('', [Validators.required, Validators.minLength(2)]),
     emailInput: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(de|com|net|nl|org|uk|cn|au|dk|pl|cz|at|lu|ru)$')]),
-    massageInput: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    messageInput: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    phoneInput: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8), // Mindestlänge auf 8 Zeichen reduziert
+      Validators.maxLength(15), // Maximallänge hinzugefügt, um die Eingabe zu begrenzen
+      Validators.pattern('^[0-9\\-\\s]+$') // Erlaubt Zahlen, Bindestriche und Leerzeichen
+    ]),
   });
 
 
   http = inject(HttpClient)
 
   post = {
-    endPoint: 'https://swetlana-makeueeepartist.de/sendMail.php',
+    endPoint: 'https://swetlana-makeupartist.de/sendMailStefan.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
+        responseType: 'text' as const
       },
     },
   };
 
   async sendMail(){
     let contactData = {
-      name: this.name,
-      email:this.email,
-      message:this.message
+        name: this.contactForm.get('nameInput')?.value,
+        email: this.contactForm.get('emailInput')?.value,
+        message: this.contactForm.get('messageInput')?.value,
+        phone: this.contactForm.get('phoneInput')?.value
     }
     this.http.post(this.post.endPoint, this.post.body(contactData))
         .subscribe({
           next: (response) => {
-            this.name = '';
-            this.email = '';
-            this.message = '';
+            this.contactForm.reset();
+            this.send = true;
+            setTimeout(() => {
+              this.send = false;
+            }, 5000);
           },
           error: (error) => {
             console.error(error);

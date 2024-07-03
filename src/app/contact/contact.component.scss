@@ -120,3 +120,28 @@ input:-webkit-autofill {
     -webkit-text-fill-color: rgb(225, 220, 215) !important;
     background-color: rgba(107, 107, 107, 0.3) !important;
 }
+
+input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.send{
+    text-align: center;
+    padding: 16px;
+
+    span{
+        font-size: 22px;
+        font-weight: 500px;
+        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+        -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
+        background-clip: text; /* Standard property for compatibility */
+        color: transparent; /* Macht den Text transparent */
+    }
+}

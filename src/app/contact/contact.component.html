@@ -17,7 +17,10 @@
       </div>
   </div>
     <div style="margin-top: 30px;">
-        <span class="send" *ngIf="send">Nachricht gesendet</span>
+        <div class="send">
+          <span  *ngIf="send">Nachricht gesendet!</span>
+        </div>
+       
         <form (ngSubmit)="sendMail()" [formGroup]="contactForm">
             <div>
               <input
@@ -34,13 +37,13 @@
             </div>
             <div>
               <input
-                autocomplete="off"
-                formControlName="phoneInput"
-                required
-                type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Ihre Telefonnummer"
-              />
+                  autocomplete="off"
+                  formControlName="phoneInput"
+                  required
+                  type="text"
+                  placeholder="Ihre Telefonnummer"
+                  minlength="11"
+            />
               <!-- <span *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
                 Bitte geben Sie Ihre E-Mail an
               </span> -->
@@ -60,7 +63,7 @@
             <div>
               <textarea
                 autocomplete="off"
-                formControlName="massageInput"
+                formControlName="messageInput"
                 required
                 minlength="5"
                 placeholder="Ihre Nachricht an uns"
