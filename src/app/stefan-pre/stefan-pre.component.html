@@ -1,12 +1,25 @@
 <div class="imageDiv">
-    <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+    <!-- <div style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
       <div data-aos="fade-up" style="width: 100%; display: flex; align-items: center; flex-direction: column; max-width: 340px;">
         <img class="fade show" [src]="'./assets/img/people/' + text[currentIndex].name.split(' ')[0] + '.jpg'" alt="">
         <div class="nameBox"><span>{{ text[currentIndex].name }}</span></div>
+      </div> 
+        <div class="Main-picture-container" >
+          <img *ngFor="let image of imagesI; let i = index"  
+              [src]="image" 
+              [alt]="'Image ' + i" 
+              [class.active]="i === currentImageIndexI" 
+              
+              (load)="nextImage();"
+          />
+          
       </div>
-    </div>
+      <div class="nameBoxForposition"><span>{{currentText}}</span></div>
+
+
+    </div> -->
   
-    <div class="text" style="font-weight: 200; width: 100%;">
+    <div class="text" style="font-weight: 200; width: 100% !important;">
       <h3 style="text-align: left;">{{ text[currentIndex].header }}</h3>
       <div *ngFor="let training of text[currentIndex].trainings">
         <span>{{ training }}</span> <br>

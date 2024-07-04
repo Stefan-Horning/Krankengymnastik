@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ShowTeamComponent } from '../show-team/show-team.component';
 
 @Component({
   selector: 'app-stefan-pre',
@@ -83,6 +84,10 @@ export class StefanPreComponent implements OnInit, OnDestroy {
     this.intervalId = setInterval(() => {
       this.changeIndex();
     }, 5000);
+
+    this.intervalId = setInterval(() => {
+      this.nextImage();
+    }, 5000); 
   }
 
   ngAfterViewInit() {
@@ -108,5 +113,40 @@ export class StefanPreComponent implements OnInit, OnDestroy {
     } else {
       this.currentIndex = (this.currentIndex + 1) % this.text.length;
     }
+  }
+
+
+  imagesI: string[] = [
+    'assets/img/people/Stefan.jpg',
+    'assets/img/people/Nicolas.jpg',
+    'assets/img/people/Julia.jpg',
+    'assets/img/people/Philip.jpg',
+    'assets/img/people/Ulla.jpg',
+    'assets/img/people/Siglinde.jpg',
+    'assets/img/people/Simone.jpg',
+  ];
+  currentImageIndexI: number = 0;
+
+  currentTextI:string = "";
+  intervalIdI: any;
+
+  textI:string[] = [
+    'Stefan Paul',
+    'Nicolas Mainz',
+    'Julia Mainz',
+    'Philip Heinrichs',
+    'Ulla Mügge',
+    'Siglinde Kämper',
+    'Simone Kirches'
+  ]
+
+  nextImage(): void {
+    this.currentImageIndexI = (this.currentImageIndexI + 1) % this.imagesI.length;
+    this.setText(this.currentImageIndexI);
+  }
+
+
+  setText(index:number){
+    this.currentTextI = this.textI[index];
   }
 }
