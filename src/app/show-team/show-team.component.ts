@@ -15,8 +15,6 @@ export class ShowTeamComponent implements OnInit{
     'assets/img/people/Julia.jpg',
     'assets/img/people/Philip.jpg',
     'assets/img/people/Ulla.jpg',
-    'assets/img/people/Siglinde.jpg',
-    'assets/img/people/Simone.jpg',
   ];
   currentImageIndex: number = 0;
 
@@ -29,8 +27,6 @@ export class ShowTeamComponent implements OnInit{
     'Julia Mainz',
     'Philip Heinrichs',
     'Ulla Mügge',
-    'Siglinde Kämper',
-    'Simone Kirches'
   ]
   ngOnInit(): void {
     this.intervalId = setInterval(() => {

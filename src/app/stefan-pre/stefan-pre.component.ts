@@ -83,11 +83,11 @@ export class StefanPreComponent implements OnInit, OnDestroy {
 
     this.intervalId = setInterval(() => {
       this.changeIndex();
-    }, 5000);
+    }, 4750);
 
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 5000); 
+    }, 4750); 
   }
 
   ngAfterViewInit() {
@@ -103,12 +103,16 @@ export class StefanPreComponent implements OnInit, OnDestroy {
   }
 
   changeIndex() {
-    const imageElement = document.querySelector('.imageDiv img');
-    if (imageElement) {
-      imageElement.classList.remove('show');
+    const textElement = document.querySelector('.text');
+    if (textElement) {
+      textElement.classList.add('fade-out');
       setTimeout(() => {
         this.currentIndex = (this.currentIndex + 1) % this.text.length;
-        imageElement.classList.add('show');
+        textElement.classList.remove('fade-out');
+        textElement.classList.add('fade-in');
+        setTimeout(() => {
+          textElement.classList.remove('fade-in');
+        }, 1000); // Zeit für den Fade-in
       }, 1000); // Zeit für den Fade-out
     } else {
       this.currentIndex = (this.currentIndex + 1) % this.text.length;
