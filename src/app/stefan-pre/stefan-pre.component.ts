@@ -83,11 +83,11 @@ export class StefanPreComponent implements OnInit, OnDestroy {
 
     this.intervalId = setInterval(() => {
       this.changeIndex();
-    }, 4750);
+    }, 5000);
 
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 4750); 
+    }, 5000); 
   }
 
   ngAfterViewInit() {
