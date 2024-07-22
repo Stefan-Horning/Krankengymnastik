@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit{
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
-  send:boolean = false;
+  send:boolean = true;
   name:any;
   email:any;
   phone:any;
@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit{
   http = inject(HttpClient)
 
   post = {
-    endPoint: 'https://swetlana-makeupartist.de/sendMailStefan.php',
+    endPoint: 'https://osteomedica-toenisvorst.de/Mailer/sendMailStefan.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -47,21 +47,22 @@ export class ContactComponent implements OnInit{
     },
   };
 
-  async sendMail(){
+  async sendMail() {
     let contactData = {
-        name: this.contactForm.get('nameInput')?.value,
-        email: this.contactForm.get('emailInput')?.value,
-        message: this.contactForm.get('messageInput')?.value,
-        phone: this.contactForm.get('phoneInput')?.value
-    }
-    this.http.post(this.post.endPoint, this.post.body(contactData))
+      name: this.contactForm.get('nameInput')?.value,
+      email: this.contactForm.get('emailInput')?.value,
+      message: this.contactForm.get('messageInput')?.value,
+      phone: this.contactForm.get('phoneInput')?.value
+    };
+    this.http.post(this.post.endPoint, this.post.body(contactData), { responseType: 'text' })
         .subscribe({
           next: (response) => {
+            console.log(response);  // Ausgabe der Antwort zur Überprüfung
             this.contactForm.reset();
             this.send = true;
             setTimeout(() => {
               this.send = false;
-            }, 5000);
+            }, 20000);
           },
           error: (error) => {
             console.error(error);

@@ -41,7 +41,7 @@ export class StefanPreComponent implements OnInit, OnDestroy {
       name: 'Julia Mainz',
       header: 'Physiotherapeutin, Osteopathin, Lymph- und Ödemtherapeutin',
       trainings: [
-        '08/95 - 06/98 Ausbildung zur Staatlicg gepr. Gymnastiklehrerin, Weber Schule in Düsseldorf',
+        '08/95 - 06/98 Ausbildung zur Staatlich gepr. Gymnastiklehrerin, Weber Schule in Düsseldorf',
         '10/2005 - 10/2008 Ausbildung zur Physiotherapeutin max Q im BfW in Essen',
         '01/2009 - 02/2009 Fortbildung lymph und Ödemtherapie Asdonk Schule Essen',
         '05/2009 Fortbildung KGG'
@@ -71,7 +71,6 @@ export class StefanPreComponent implements OnInit, OnDestroy {
         'Fortbildung Sanfter Chiropraktik nach Mutzhas 2011',
         'Fortbildung CMD (Craniomandibuläre Dysfunktion) 2013',
         'Fortbildung Palliativ Care für Physiotherapeuten 2017',
-        'Weitere Fortbildungen in den Bereichen: Medizinische Trainingstherapie, Beckenbodentraining, Vestibulartraining, Akupressur, Fußreflexzonentherapie, Atemtherapie, Kinesiotape',
       ]
     }
   ];
@@ -83,11 +82,11 @@ export class StefanPreComponent implements OnInit, OnDestroy {
 
     this.intervalId = setInterval(() => {
       this.changeIndex();
-    }, 5000);
+    }, 12000);
 
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 5000); 
+    }, 12000); 
   }
 
   ngAfterViewInit() {

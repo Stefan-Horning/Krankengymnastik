@@ -2,6 +2,7 @@
 
 .imageDiv{
     width: 100% !important;
+    height: 600px;
     span{
         min-width: 100% !important;
     }
@@ -20,6 +21,8 @@
         padding-left: 40px;
         max-height: 500px !important;
     }
+    max-height: 550px !important;
+    height: 500px;
     min-width: 90% !important;
     height: fit-content;
     div{

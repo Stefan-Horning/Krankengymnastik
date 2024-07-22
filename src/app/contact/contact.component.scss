@@ -135,10 +135,13 @@ input[type=number] {
 .send{
     text-align: center;
     padding: 16px;
-
+    text-decoration: underline;
+    text-decoration-color: rgb(152, 195, 137);
     span{
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 500px;
+        font-weight: 700;
+        
         background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
         -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
         background-clip: text; /* Standard property for compatibility */

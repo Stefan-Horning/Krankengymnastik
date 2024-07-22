@@ -31,7 +31,7 @@ export class ShowTeamComponent implements OnInit{
   ngOnInit(): void {
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 5000); 
+    }, 12000); 
   }
   nextImage(): void {
     this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
