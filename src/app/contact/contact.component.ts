@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit{
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
-  send:boolean = true;
+  send:boolean = false;
   name:any;
   email:any;
   phone:any;
@@ -62,7 +62,7 @@ export class ContactComponent implements OnInit{
             this.send = true;
             setTimeout(() => {
               this.send = false;
-            }, 20000);
+            }, 25000);
           },
           error: (error) => {
             console.error(error);
