@@ -33,31 +33,31 @@ export class StefanPreComponent implements OnInit, OnDestroy {
       header: 'Physiotherapeut, Osteopath, Lymph- und Ödemtherapeut',
       trainings: [
         'Ausbildung zum Physiotherapeuten an der Westfalenakademie in Dortmund mit Abschluss Staatl. Geprüft. Physiotherapeut im Oktober 2010',
-        'Ausbildung in Osteopathie an der Still-Academy in Oberhausen mit Abschluss im 2018',
-        'Weiterbildung zum Lymph- und Odemtherapeut nach Asdonk mit Abschluss in 2018'
+        'Ausbildung in Osteopathie an der Still-Academy in Oberhausen mit Abschluss in 2018',
+        'Weiterbildung zum Lymph- und Ödemtherapeut nach Asdonk mit Abschluss in 2018'
       ]
     },
     {
       name: 'Julia Mainz',
-      header: 'Physiotherapeutin, Osteopathin, Lymph- und Ödemtherapeutin',
+      header: 'Physiotherapeutin, Lymph- und Ödemtherapeutin',
       trainings: [
-        '08/95 - 06/98 Ausbildung zur Staatlich gepr. Gymnastiklehrerin, Weber Schule in Düsseldorf',
-        '10/2005 - 10/2008 Ausbildung zur Physiotherapeutin max Q im BfW in Essen',
-        '01/2009 - 02/2009 Fortbildung lymph und Ödemtherapie Asdonk Schule Essen',
-        '05/2009 Fortbildung KGG'
+        'Ausbildung zur Staatl. Geprüft. Gymnastiklehrerin an der Weber Schule in Düsseldorf mit Abschluss im Juni 1998',
+        'Ausbildung zur Physiotherapeutin bei maxQ. im BfW in Essen mit Abschluss Staatl. Geprüft.  Physiotherapeutin im Oktober 2008',
+        'Zertifikatsfortbildung in Lymph- und Ödemtherapie an der Asdonk Schule Essen in 2009',
+        'Fortbildung in Gerätegestützter Krankengymnastik - KGG im Mai 2009'
       ]
     },
     {
       name: 'Philip Heinrichs',
       header: 'Physiotherapeut',
       trainings: [
-        '2021 Abschluss als staatl. anerkannter Physiotherapeut an der Schule für Physiotherapie am EVK Düsseldorf',
-        '2019 Kinesiologisches Tapen - Kompaktkurs',
-        '2019 Functional Kinetics nach Dr. Klein-Vogelbach an der Uni Basel (Kurse Basic + Status)',
-        '2021 Manuelle Lymphdrainage/KPE',
-        '2021 Anbieterqualifikation des Leitfadens Prävention',
-        '2023 Gerätegestützte Krankengymnastik, anerkannt zur Abrechnungsposition KG-Gerät',
-        '2023 EHPI Foundation + Medical (seit 04/23 anerkannter EHPI-M Expert)'
+        'Ausbildung zum Physiotherapeuten an der Schule für Physiotherapie am EVK Düsseldorf mit Abschluss Staatl. Geprüft. Physiotherapeut in 2021',
+        'Fortbildung Kinesiologisches Tapen - Kompaktkurs in 2019',
+        'Fortbildung Functional Kinetics nach Dr. Klein-Vogelbach an der Uni Basel (Kurse Basic + Status) in 2019',
+        'Zertifikatsfortbildung Manuelle Lymphdrainage/Komplexe Physikalische Entstauungstherapie in 2021',
+        'Anbieterqualifikation des Leitfadens Prävention in 2021',
+        'Zertifikatsfortbildung Gerätegestützte Krankengymnastik - KGG in 2023',
+        'Esports Health and Performance Institute - EHPI Foundation + EHPI Medical (seit 04/23 anerkannter EHPI-M Expert)'
       ]
     },
     {
@@ -65,12 +65,13 @@ export class StefanPreComponent implements OnInit, OnDestroy {
       header: 'Physiotherapeutin',
       trainings: [
         'Ausbildung zur Physiotherapeutin an der Professor-Greve Schule in Bad Iburg von 1985-1987, Examen und Anerkennungsjahr im Klinikum Reinkenheide in Bremerhaven, staatliche Anerkennung seit 1.4.1988',
-        'Fortbildung Bobath-Konzept für Erwachsene in Wijchen (NL) 1999',
-        'Fortbildung Manueller Therapie 2004',
-        'Fortbildung Manueller Lymphdrainage nach Dr. Vodder 2007',
-        'Fortbildung Sanfter Chiropraktik nach Mutzhas 2011',
-        'Fortbildung CMD (Craniomandibuläre Dysfunktion) 2013',
-        'Fortbildung Palliativ Care für Physiotherapeuten 2017',
+        'Zertifikatsfortbildung Bobath-Konzept für Erwachsene in Wijchen (NL) in 1999',
+        'Zertifikatsfortbildung in Manueller Therapie in 2004',
+        'Zertifikatsfortbildung in Manueller Lymphdrainage nach Dr. Vodder in 2007',
+        'Fortbildung Sanfter Chiropraktik nach Mutzhas in 2011',
+        'Fortbildung CMD (Craniomandibuläre Dysfunktion) in 2013',
+        'Fortbildung Palliativ Care für Physiotherapeuten in 2017',
+        'Weitere Fortbildungen in den Bereichen: Medizinische Trainingstherapie MTT, Beckenbodentraining, Vestibulartraining, Akupressur, Fußreflexzonentherapie, Atemtherapie, Kinesiotape'
       ]
     }
   ];

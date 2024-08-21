@@ -22,7 +22,7 @@
     <div class="text" style="font-weight: 200; width: 100% !important;">
       <h3 style="text-align: left;">{{ text[currentIndex].header }}</h3>
       <div *ngFor="let training of text[currentIndex].trainings">
-        <span>{{ training }}</span> <br>
+        <span [innerHTML]="training"></span> <br>
       </div>
     </div>
   </div>

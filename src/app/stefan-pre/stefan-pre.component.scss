@@ -30,7 +30,7 @@
 
         span{
             width: 100% !important; 
-            animation: fadeAnimation 4750ms infinite;
+            animation: fadeAnimation 4750ms ease;
         }
     }
 }
