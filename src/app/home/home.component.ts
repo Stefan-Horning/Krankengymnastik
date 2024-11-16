@@ -24,6 +24,25 @@ export class HomeComponent implements OnInit{
 
   currentText:string = ""
 
+  names = [
+    {
+      "name": "Stefan Paul"
+    },
+    {
+      "name": "Nicolas Mainz"
+    },
+    {
+      "name": "Julia Mainz"
+    },
+    {
+      "name": "Philip Heinrichs"
+    },
+    {
+      "name": "Ulla Mügge"
+    }
+  ]
+  
+
   setText(index:number){
     this.currentText = this.text[index];
   }

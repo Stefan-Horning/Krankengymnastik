@@ -20,7 +20,6 @@ export class TeamComponent implements OnInit{
   currentText: string = "";
   images: string[] = [
     'assets/img/people/Siglinde.jpg',
-    'assets/img/people/Simone.jpg',
   ];
 
   ngOnInit(): void {
@@ -37,7 +36,6 @@ export class TeamComponent implements OnInit{
   }
   names: string[] = [
     'Siglinde Kämper',
-    'Simone Kirches',
   ];
   
   text = [

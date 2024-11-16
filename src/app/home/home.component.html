@@ -37,12 +37,23 @@
         </div>
         
         <div class="welcomeText ">
-            <div class="addDestopTeam">
-                
+            <!-- >Animation OLD -->
+            <!-- <div class="addDestopTeam">
+                class="nameBox"
                 <app-show-team style="width: 100%; display: flex; align-items: center; flex-direction: column;"></app-show-team>
                 <app-stefan-pre style="width: 100%; "></app-stefan-pre>
-            </div>
-            
+            </div> -->
+            <div class="NEWWRAPPER">
+                <div *ngFor="let item of names; let i = index" class="item-container" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
+                  <div class="item-content">
+                    <div class="fade-up-box">
+                      <img class="person-image" [src]="'./assets/img/people/' + item.name.split(' ')[0] + '.jpg'" alt="{{ item.name }}">
+                      <div class="nameBox"><span>{{ item.name }}</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             <div class="TeamButton">
                 <a routerLink="/team">Werde Teil des Teams</a>
             </div>
@@ -98,14 +109,12 @@
                 <a routerLink="/leistungen">Erfahre mehr darüber</a>
             </div>
         </div>
-        
-        <app-contact-pre></app-contact-pre>
         <div class="welcomeText" >
             <h3>Unsere <b><span>Bürozeiten</span></b></h3>
             <div class="imageDiv" >
-                <div class="imageDivC"  style="width: 100% ;display: flex; justify-content: center; align-items: center; flex-direction: column; overflow-y: hidden;">
-                    <img data-aos="fade-up" class="openOursImage" src="./assets/img/people/Simone.jpg" alt="">
-                </div>
+                <!-- <div class="imageDivC"  style="width: 100% ;display: flex; justify-content: center; align-items: center; flex-direction: column; overflow-y: hidden;">
+                    <img data-aos="fade-up" class="openOursImage" src="./assets/img/people/Siglinde.jpg" alt="">
+                </div> -->
                 <div style="font-weight: 200; text-align: center; padding-top: 20px;">
                     <Span><span style="color: rgb(108, 158, 95);">Montag</span> von 09:00 bis 13:00 Uhr</Span><br>
                     <Span><span style="color: rgb(108, 158, 95);">Dinstag</span> von 09:00 bis 13:00 Uhr</Span><br>
@@ -116,6 +125,7 @@
                 </div>
             </div>
         </div>
+        <app-contact-pre></app-contact-pre>
         <app-price-pre></app-price-pre>
     </div>
     

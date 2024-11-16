@@ -87,6 +87,40 @@
     }
 }
 
+.nameBox{
+
+    transform: translateY(-20px);
+    background-image: url('../../assets/img/Name-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    min-width: 100%;
+    //background-color: rgb(108, 158, 95);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-width: 340px ;
+
+
+
+    @media (min-width:400px){
+        background-size: cover;
+        min-width: 340px !important;
+    }
+
+    span{
+        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+        -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
+        background-clip: text; /* Standard property for compatibility */
+        color: transparent; /* Macht den Text transparent */
+        font-size: 28px;
+        font-weight: 500;
+    }
+}
+
 .nameBoxForposition{
     z-index: 3;
     position: relative;
@@ -213,7 +247,7 @@
         border-top-right-radius: 10px;
 
         @media (min-width:900px) {
-            max-width: 380px ;
+            max-width: 340px ;
             height: 280px;
             object-fit: cover;
         }
@@ -457,3 +491,93 @@ app-stefan-pre{
         
     }
 }
+
+
+
+.NEWWRAPPER {
+    display: flex;
+    flex-wrap: wrap !important; /* Allows items to wrap to the next line if needed */
+    justify-content: space-around; /* Distributes items evenly */
+    gap: 20px; /* Adds space between the items */
+    padding: 25px 0;
+    max-width: 100%;
+}
+  
+  .item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Default width */
+    max-width: 340px; /* Restricts the maximum width of the items */
+    box-sizing: border-box; /* Includes padding and border in the element’s total width */
+  }
+  
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  
+  .fade-up-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .person-image {
+    max-width: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    transition: opacity 0.6s ease;
+  }
+  
+  .name-banner {
+    background-image: url('../../assets/img/Name-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+    span {
+      background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    .item-container {
+      margin: 20px;
+    }
+  
+    .fade-up-box {
+      max-width: 340px;
+      height: 280px;
+    }
+  
+    .person-image {
+      height: 280px;
+    }
+  }
+  
+  
