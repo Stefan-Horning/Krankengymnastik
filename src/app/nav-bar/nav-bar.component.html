@@ -1,6 +1,6 @@
 <div class="resp-div">
     <div class="nav-div">
-        <img routerLink="/home" src="./assets/img/osteomedica-logo.webp" alt="">
+        <img routerLink="/" src="./assets/img/osteomedica-logo.webp" alt="">
         <div class="nav-mobile" (click)="switch(); $event.stopPropagation();">
             <div id="webapp_cover">
                 <div id="menu_button">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="destop-bar">
-            <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/home" [routerLinkActive]="'active-link'">Home</a>
+            <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
             <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
             <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">Preise</a>
             <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>
@@ -24,7 +24,7 @@
 
 <div (click)="switch(); $event.stopPropagation();" *ngIf="isMenuOpen" class="mobile-menu">
     <div>
-        <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/home" [routerLinkActive]="'active-link'">Home</a>
+        <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
         <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">Preise</a>
         <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>

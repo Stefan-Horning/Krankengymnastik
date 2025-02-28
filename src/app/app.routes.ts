@@ -11,7 +11,7 @@ import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { PriceComponent } from './price/price.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent},
+    { path: '', component: HomeComponent},
     { path: 'team', component: TeamComponent},
     { path: 'leistungen' , component:ServicesComponent},
     { path: 'kontakt' , component:ContactComponent},
@@ -21,5 +21,5 @@ export const routes: Routes = [
     { path: 'impressum' , component:ImprintComponent},
     { path: 'preise' , component:PriceComponent},
     { path: 'datenschutzerklaerung' , component:DatenschutzComponent},
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: '' }
 ];
