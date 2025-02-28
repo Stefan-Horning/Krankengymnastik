@@ -90,7 +90,7 @@
 .nameBox{
 
     transform: translateY(-20px);
-    background-image: url('../../assets/img/Name-Banner.png');
+    background-image: url('../../assets/img/Name-Banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -126,7 +126,7 @@
     position: relative;
     width: 100%;
     transform: translateY(-60px);
-    background-image: url('../../assets/img/Name-Banner.png');
+    background-image: url('../../assets/img/Name-Banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -169,7 +169,7 @@
         cursor: pointer;
         color: white;
         padding: 8px;
-        background-color: rgb(108, 158, 95);
+        background-color: rgb(50, 100, 50);
 
         &:hover{
             background-color: rgb(109, 143, 101);
@@ -302,7 +302,7 @@
 .description  {
     color: #ffffff;
     letter-spacing: 5px;
-    text-shadow:2px 2px 2px rgb(108, 158, 95);
+    text-shadow:2px 2px 2px rgb(50, 100, 50);
     font-size: 22px;
     padding-top: 5px;
 }
@@ -325,15 +325,15 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('../../assets/img/Osteopathie.jpeg');
+    background-image: url('../../assets/img/Osteopathie.webp');
     background-size: cover;
 }
 .card[for="c2"] {
-    background-image: url('../../assets/img/Physiotherapie.jpeg');
+    background-image: url('../../assets/img/Physiotherapie.webp');
     background-size: cover;
 }
 .card[for="c3"] {
-    background-image: url('../../assets/img/Naturheilpraxis.jpeg');
+    background-image: url('../../assets/img/Naturheilpraxis.webp');
     background-size: cover;
 }
   
@@ -538,7 +538,7 @@ app-stefan-pre{
   }
   
   .name-banner {
-    background-image: url('../../assets/img/Name-Banner.png');
+    background-image: url('../../assets/img/Name-Banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

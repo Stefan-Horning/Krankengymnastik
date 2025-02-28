@@ -17,9 +17,9 @@ import { PricePreComponent } from '../price-pre/price-pre.component';
 })
 export class HomeComponent implements OnInit{
   images: string[] = [
-    'assets/img/Physiotherapie.jpeg',
-    'assets/img/Osteopathie.jpeg',
-    'assets/img/Naturheilpraxis.jpeg'
+    'assets/img/Physiotherapie.webp',
+    'assets/img/Osteopathie.webp',
+    'assets/img/Naturheilpraxis.webp'
   ];
 
   currentText:string = ""

@@ -19,7 +19,7 @@ export class TeamComponent implements OnInit{
   intervalId: any;
   currentText: string = "";
   images: string[] = [
-    'assets/img/people/Siglinde.jpg',
+    'assets/img/people/Siglinde.webp',
   ];
 
   ngOnInit(): void {
@@ -54,7 +54,7 @@ export class TeamComponent implements OnInit{
       name: 'Nicolas Mainz',
       header: 'Physiotherapeut, Osteopath, Lymph- und Ödemtherapeut',
       trainings: [
-        'Ausbildung zum Physiotherapeuten an der Westfalenakademie in Dortmund mit Abschluss Staatl. Geprüft. Physiotherapeut im Oktober 2010',
+        'Sechsjährige Ausbildung zum Physiotherapeuten an der Westfalenakademie in Dortmund mit Abschluss in 2009 Staatl. Geprüft. Physiotherapeut im Oktober 2010',
         'Ausbildung in Osteopathie an der Still-Academy in Oberhausen mit Abschluss in 2018',
         'Weiterbildung zum Lymph- und Ödemtherapeut nach Asdonk mit Abschluss in 2018'
       ]

@@ -4,13 +4,13 @@
     <h3>Zum <b><span>Kontakt</span></b></h3>
     <div class="imageDiv">
       <div style="width: 100% ;display: flex; justify-content: center; align-items: center; flex-direction: column;">
-          <img src="./assets/img/people/Siglinde.jpg" alt="">
+          <img src="./assets/img/people/Siglinde.webp" alt="">
       </div>
       
       <div class="text" style="font-weight: 200; width: 100%;" >
           <span>Fragen? Anregungen? Wir sind hier, um zu helfen!</span>
           <br>
-          <span>Ruf uns an unter <a style="color: rgb(108, 158, 95);" href="tel:021519424700">02151-9424700</a> oder schreib uns über unser Kontaktformular.</span>
+          <span>Ruf uns an unter <a aria-label="Telefonnummer" style="color: rgb(50, 100, 50); " href="tel:021519424700">02151-9424700</a> oder schreib uns über unser Kontaktformular.</span>
           <br>
           <span>Wir freuen uns darauf, von dir zu hören!</span>
           <br>
@@ -18,7 +18,7 @@
   </div>
     <div style="margin-top: 30px;">
         <div class="send">
-          <span  *ngIf="send">Nachricht gesendet!</span>
+          <span *ngIf="send">Nachricht gesendet! In 15 Minuten kann eine neue Nachricht gesendet werden.</span>
         </div>
        
         <form (ngSubmit)="sendMail()" [formGroup]="contactForm">
@@ -75,7 +75,28 @@
               </span> -->
             </div>
             <div>
-              <button [disabled]="!contactForm.valid">Nachricht senden</button>
+              <div style="display: flex; flex-direction: row; color: rgb(0, 0, 0); align-items: flex-start;">
+                <input id="termsCheckbox" style="height: 1.2rem; width: 1.2rem; margin-right: 8px;" 
+                       type="checkbox" formControlName="termsInput">
+                
+                <label for="termsCheckbox">
+                  Ich akzeptiere die 
+                  <a aria-label="Datenschutzerklärung" target="_blank" style="color: #0056b3 " routerLink="/Impressum">
+                    Datenschutzerklärung
+                  </a>.
+                </label>
+              </div>
+            
+              <div style="display: flex; justify-content: center; align-items: center;" 
+                   *ngIf="contactForm.get('termsInput')?.invalid && contactForm.get('termsInput')?.touched">
+                <span style="display: block; text-align: center; color: red; height: 55px;">
+                  Sie müssen die Nutzungsbedingungen akzeptieren.
+                </span>
+              </div>
+            </div>
+            
+            <div>
+              <button [disabled]="!contactForm.valid || send">Nachricht senden</button>
             </div>
           </form>
     </div>
@@ -84,7 +105,14 @@
 <div>
   <h3>Unsere <b><span>Adresse</span></b></h3>
   <div style="display: flex; width: 100%; justify-content: center;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.832070134689!2d6.494669311911393!3d51.32186722412284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8af790aad2c8d%3A0x270ffac345eb6c6b!2sOsteomedica%20-%20Osteopathie%2C%20Physiotherapie%2C%20Heilkunde!5e0!3m2!1sen!2sde!4v1716646290884!5m2!1sen!2sde" width="90%" height="400px" style="border:0;" allowfullscreen="false"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe 
+    title="Google Maps Standort von Osteomedica" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.832070134689!2d6.494669311911393!3d51.32186722412284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8af790aad2c8d%3A0x270ffac345eb6c6b!2sOsteomedica%20-%20Osteopathie%2C%20Physiotherapie%2C%20Heilkunde!5e0!3m2!1sen!2sde!4v1716646290884!5m2!1sen!2sde"
+     width="90%"
+      height="400px"
+       style="border:0;"
+        allowfullscreen="false"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div style="display: flex; width: 100%; justify-content: center; padding-top: 20px; text-align: center; padding-bottom: 20px;">
     <span style="font-size: 22px;">Ludwig-Jahn-Str. 8

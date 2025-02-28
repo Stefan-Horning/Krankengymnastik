@@ -3,19 +3,17 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,FormsModule,HttpClientModule],
+  imports: [ReactiveFormsModule,CommonModule,FormsModule,HttpClientModule,RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   providers: [HttpClient]
 })
 export class ContactComponent implements OnInit{
-  ngOnInit(): void {
-    window.scrollTo(0, 0);
-  }
   send:boolean = false;
   name:any;
   email:any;
@@ -31,9 +29,33 @@ export class ContactComponent implements OnInit{
       Validators.maxLength(15), // Maximallänge hinzugefügt, um die Eingabe zu begrenzen
       Validators.pattern('^[0-9\\-\\s]+$') // Erlaubt Zahlen, Bindestriche und Leerzeichen
     ]),
+    termsInput: new FormControl(false, [Validators.requiredTrue]) // Neues FormControl für Nutzungsbedingungen
   });
 
-
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+    const sendStatus = localStorage.getItem('sendStatus');
+    if (sendStatus) {
+      this.send = JSON.parse(sendStatus);
+      if (this.send) {
+        const sendTimeout = localStorage.getItem('sendTimeout');
+        if (sendTimeout) {
+          const remainingTime = parseInt(sendTimeout) - Date.now();
+          if (remainingTime > 0) {
+            setTimeout(() => {
+              this.send = false;
+              localStorage.removeItem('sendStatus');
+              localStorage.removeItem('sendTimeout');
+            }, remainingTime);
+          } else {
+            this.send = false;
+            localStorage.removeItem('sendStatus');
+            localStorage.removeItem('sendTimeout');
+          }
+        }
+      }
+    }
+  }
   http = inject(HttpClient)
 
   post = {
@@ -48,26 +70,34 @@ export class ContactComponent implements OnInit{
   };
 
   async sendMail() {
-    let contactData = {
-      name: this.contactForm.get('nameInput')?.value,
-      email: this.contactForm.get('emailInput')?.value,
-      message: this.contactForm.get('messageInput')?.value,
-      phone: this.contactForm.get('phoneInput')?.value
-    };
-    this.http.post(this.post.endPoint, this.post.body(contactData), { responseType: 'text' })
-        .subscribe({
-          next: (response) => {
-            console.log(response);  // Ausgabe der Antwort zur Überprüfung
-            this.contactForm.reset();
-            this.send = true;
-            setTimeout(() => {
-              this.send = false;
-            }, 25000);
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-  }
+    if(this.send != true){
+      let contactData = {
+        name: this.contactForm.get('nameInput')?.value,
+        email: this.contactForm.get('emailInput')?.value,
+        message: this.contactForm.get('messageInput')?.value,
+        phone: this.contactForm.get('phoneInput')?.value
+      };
+      this.http.post(this.post.endPoint, this.post.body(contactData), { responseType: 'text' })
+          .subscribe({
+            next: (response) => {
+              console.log(response);  // Ausgabe der Antwort zur Überprüfung
+              this.contactForm.reset();
+              this.send = true;
+              localStorage.setItem('sendStatus', JSON.stringify(this.send));
+              const timeout = Date.now() + 900000; // 15 Minuten
+              localStorage.setItem('sendTimeout', timeout.toString());
+              setTimeout(() => {
+                this.send = false;
+                localStorage.removeItem('sendStatus');
+                localStorage.removeItem('sendTimeout');
+              }, 900000);
+            },
+            error: (error) => {
+              console.error(error);
+            },
+            complete: () => console.info('send post complete'),
+          });
+    }
+    }
+    
 }

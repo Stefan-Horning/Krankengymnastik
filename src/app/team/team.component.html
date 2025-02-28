@@ -4,7 +4,7 @@
         <div class="imageDiv" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
             <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
               <div data-aos="fade-up" style="width: 100%; display: flex; align-items: center; flex-direction: column; max-width: 340px;">
-                <img class="fade show" [src]="'./assets/img/people/' + item.name.split(' ')[0] + '.jpg'" alt="">
+                <img class="fade show" [src]="'./assets/img/people/' + item.name.split(' ')[0] + '.webp'" alt="">
                 <div class="nameBox"><span>{{ item.name }}</span></div>
               </div>
             </div>
@@ -23,25 +23,24 @@
         <div class="nameBox" style="margin: 0; margin-top: -10px;"><span class="nameSpan">{{names[i]}}</span></div>
     </div>
 </div>
-<div class="welcomeText">
-  <h3 style="width: 100%;">Wir suchen <b><span>Mitarbeiter</span></b></h3>
-  <div class="imageDiv">
-      <div class="imageDivC" style="width: 100% ;display: flex; justify-content: center; align-items: center; flex-direction: column;">
-          <img src="./assets/img/people/Siglinde.jpg" data-aos="fade-up" alt="">
+<div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <div class="welcomeText">
+        <h3 style="width: 100%;">Wir suchen <b><span>Mitarbeiter</span></b></h3>
+        <div class="imageDiv">
+            
+            <div class="text" style="font-weight: 200; text-align: center;" >
+                <span>Möchtest du zu unserm Team gehören?</span>
+                <br>
+                <span>Bewirb dich gerne unter <a aria-label="E-Mail-Adresse" style="color: rgb(50, 100, 50);" href="mailto:info@osteomedica-toenisvorst.de">info&#64;osteomedica-toenisvorst.de</a> oder schreib uns über unser Kontaktformular.</span>
+                <br>
+                <span>Wir freuen uns darauf, von dir zu hören!</span>
+                <br>
+            </div>
+        </div>
+        
+        <div class="TeamButton" style="padding-top: 50px;">
+            <a aria-label="Kontakt-Seite" routerLink="/kontakt">Weiter zum Kontaktformular</a>
+        </div>
+        
       </div>
-      
-      <div class="text" style="font-weight: 200;" >
-          <span>Möchtest du zu unserm Team gehören?</span>
-          <br>
-          <span>Bewirb dich gerne unter <a style="color: rgb(108, 158, 95);" href="mailto:info@osteomedica-toenisvorst.de">info&#64;osteomedica-toenisvorst.de</a> oder schreib uns über unser Kontaktformular.</span>
-          <br>
-          <span>Wir freuen uns darauf, von dir zu hören!</span>
-          <br>
-      </div>
-  </div>
-  
-  <div class="TeamButton" style="padding-top: 50px;">
-      <a routerLink="/kontakt">Weiter zum Kontaktformular</a>
-  </div>
-  
 </div>

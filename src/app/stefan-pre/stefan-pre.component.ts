@@ -121,13 +121,13 @@ export class StefanPreComponent implements OnInit, OnDestroy {
 
 
   imagesI: string[] = [
-    'assets/img/people/Stefan.jpg',
-    'assets/img/people/Nicolas.jpg',
-    'assets/img/people/Julia.jpg',
-    'assets/img/people/Philip.jpg',
-    'assets/img/people/Ulla.jpg',
-    'assets/img/people/Siglinde.jpg',
-    'assets/img/people/Simone.jpg',
+    'assets/img/people/Stefan.webp',
+    'assets/img/people/Nicolas.webp',
+    'assets/img/people/Julia.webp',
+    'assets/img/people/Philip.webp',
+    'assets/img/people/Ulla.webp',
+    'assets/img/people/Siglinde.webp',
+    'assets/img/people/Simone.webp',
   ];
   currentImageIndexI: number = 0;
 

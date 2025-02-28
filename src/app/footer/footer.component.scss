@@ -1,5 +1,5 @@
 .footer{
-    border-top: 2px solid rgb(108, 158, 95);
+    border-top: 2px solid rgb(50, 100, 50);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@
             }
             a{
                 text-decoration: none;
-                color: rgb(108, 158, 95);
+                color: rgb(50, 100, 50);
                 &:hover{
                     color: #637e5d;
                 }
@@ -66,5 +66,5 @@
 }
 
 .active-link{
-    color: rgb(108, 158, 95) !important;
+    color: rgb(50, 100, 50) !important;
 }

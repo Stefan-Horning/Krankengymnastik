@@ -28,14 +28,15 @@ form{
     input{
         padding: 16px;
         width: 100%;
-        color: rgb(108, 158, 95);
+        color: rgb(50, 100, 50);
         border-radius: 10px;
-        border: 1px solid rgb(108, 158, 95);
+        border: 1px solid rgb(50, 100, 50);
         font-size: 14px;
         font-family: 'Open Sans';
         &::placeholder{
-            color: rgb(108, 158, 95);
+            color: rgb(50, 100, 50);
             font-family: 'Open Sans';
+            
         }
 
         &:focus-visible{
@@ -56,19 +57,21 @@ form{
         min-height: 150px;
         padding: 16px;
         width: 100%;
-        color: rgb(108, 158, 95);
+        color: rgb(50, 100, 50);
         background-color: rgb(255, 254, 254) !important;
         border-radius: 10px;
-        border: 1px solid rgb(108, 158, 95);
+        border: 1px solid rgb(50, 100, 50);
         font-size: 14px;
         font-family: 'Open Sans';
+        
 
         @media (max-width:1000px) {
             width: 250px !important;
             min-width: 250px !important;
         }
         &::placeholder{
-            color: rgb(108, 158, 95);
+            color: rgb(50, 100, 50);
+            
             font-family: 'Open Sans';
         }
 
@@ -142,7 +145,7 @@ input[type=number] {
         font-weight: 500px;
         font-weight: 700;
         
-        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(108, 158, 95));
+        background: linear-gradient(to bottom, rgb(152, 195, 137), rgb(50, 100, 50));
         -webkit-background-clip: text; /* Unterstützung für Webkit-basierte Browser */
         background-clip: text; /* Standard property for compatibility */
         color: transparent; /* Macht den Text transparent */

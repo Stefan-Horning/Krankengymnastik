@@ -68,6 +68,7 @@
     }
     span{
         padding-top: 30px;
+        color: black;
     }
 
     @media (min-width: 900px) {
@@ -84,3 +85,15 @@
     align-items: center;
     justify-content: center;
   }
+
+  a{
+    color: #003366;
+    text-decoration: underline;
+  }
+
+.div-overdiv{
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}
