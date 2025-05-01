@@ -71,6 +71,7 @@ export class ContactComponent implements OnInit{
 
   async sendMail() {
     if(this.send != true){
+      this.send = true;
       let contactData = {
         name: this.contactForm.get('nameInput')?.value,
         email: this.contactForm.get('emailInput')?.value,

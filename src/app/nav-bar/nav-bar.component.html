@@ -12,11 +12,11 @@
             </div>
         </div>
         <div class="destop-bar">
-            <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
-            <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">Preise</a>
-            <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>
-            <a aria-label="Kontakt-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/kontakt" [routerLinkActive]="'active-link'" href="">Kontakt</a>
+            <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">{{dataJson["Block1"]}}</a>
+            <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">{{dataJson["Block2"]}}</a>
+            <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">{{dataJson["Block3"]}}</a>
+            <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">{{dataJson["Block4"]}}</a>
+            <a aria-label="Kontakt-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/kontakt" [routerLinkActive]="'active-link'" href="">{{dataJson["Block5"]}}</a>
         </div>
     </div>
 </div>
@@ -24,10 +24,10 @@
 
 <div (click)="switch(); $event.stopPropagation();" *ngIf="isMenuOpen" class="mobile-menu">
     <div>
-        <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">Leistungen</a>
-        <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">Preise</a>
-        <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">Team</a>
-        <a aria-label="Kontakt-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/kontakt" [routerLinkActive]="'active-link'" href="">Kontakt</a>
+        <a aria-label="Start-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">{{dataJson["Block1"]}}</a>
+        <a aria-label="Leistung-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/leistungen" [routerLinkActive]="'active-link'" href="">{{dataJson["Block2"]}}</a>
+        <a aria-label="Preis-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/preise" [routerLinkActive]="'active-link'" href="">{{dataJson["Block3"]}}</a>
+        <a aria-label="Team-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/team" [routerLinkActive]="'active-link'" href="">{{dataJson["Block4"]}}</a>
+        <a aria-label="Kontakt-Seite" (click)="switch(); $event.stopPropagation();" routerLink="/kontakt" [routerLinkActive]="'active-link'" href="">{{dataJson["Block5"]}}</a>
     </div>
 </div>

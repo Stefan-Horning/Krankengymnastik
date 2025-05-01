@@ -7,22 +7,20 @@
             <div class="contact-bar">
                 <div>
                     <img src="./assets/img/icons/map-marker-2-32.webp" alt="">
-                    <span><a aria-label="Google maps" target="_blank" href="https://www.google.com/maps/place/Ludwig-Jahn-Stra%C3%9Fe+8,+47918+T%C3%B6nisvorst/@51.3219115,6.4945836,17z/data=!3m1!4b1!4m6!3m5!1s0x47b8af71b5367493:0x28227e084e103126!8m2!3d51.3219115!4d6.4971585!16s%2Fg%2F11bw3xsc7_?entry=ttu">Ludwig-Jahn-Str. 8
-                        47918 Tönisvorst</a></span>
+                    <span><a aria-label="Google maps" target="_blank" [href]="getGoogleMapsLink(dataJson['Adresse'])">{{dataJson['Adresse']}}</a></span>
                 </div>
                 <div>
                     <img src="./assets/img/icons/phone-68-32.webp" alt="">
-                    <span><a aria-label="Telefonnummer" href="tel:021519424700">02151-9424700</a></span>
+                    <span><a aria-label="Telefonnummer" href="tel:021519424700">{{dataJson['Telefonnummer']}}</a></span>
                 </div>
                 <div>
                     <img src="./assets/img/icons/phone-13-32.webp" alt="">
-                    <span><a href="fax:021514854050" aria-label="Fax-Nummer">02151-4854050</a></span>
+                    <span><a href="fax:021519424172" aria-label="Fax-Nummer">{{dataJson['FaxNummer']}}</a></span>
                 </div>
                 <div>
                     <img src="./assets/img/icons/mail-32.webp" alt="">
-                    <span><a aria-label="E-Mail Adresse" href="mailto:info@osteomedica-toenisvorst.de">info&#64;osteomedica-toenisvorst.de</a></span>
+                    <span><a aria-label="E-Mail Adresse" href="mailto:{{dataJson['EMail']}}">{{dataJson['EMail']}}</a></span>
                 </div>
-        
             </div>
             <div class="contact-bar">
                 <!-- <h2>Rechliches</h2> -->
@@ -33,7 +31,7 @@
                 </div>
                 <div style="justify-content: center; align-items: center;">
                     <span style="font-weight: 200; font-size: 16px; padding-bottom: 8px;">
-                        © Stefan Paul 2024
+                       {{ dataJson['Copyright'] }}
                     </span>
                 </div>
                 <div style="justify-content: center; align-items: center;">
@@ -41,9 +39,6 @@
                         Webdesign by Stefan Horning
                     </span>
                 </div>
-        
-                
-                
             </div>
         </div>
 
