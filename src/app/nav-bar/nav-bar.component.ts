@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterLinkActive],
+  imports: [CommonModule,RouterLink,RouterLinkActive,HttpClientModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
@@ -24,33 +25,35 @@ export class NavBarComponent {
 
   dataJson: { [key: string]: any } = {};
 
+
+  http = inject(HttpClient)
+
   constructor() {
+    //this.loadDefaultData();
     this.loadData();
   }
 
-  private readonly defaultData = {
-    "Block1": "Home",
-    "Block2": "Leistungen",
-    "Block3": "Preise",
-    "Block4": "Team",
-    "Block5": "Kontakt",
+  loadDefaultData() {
+    this.http.get<{ data: any[] }>('./assets/navigations.json').subscribe(data => {
+      this.dataJson = data.data[0];
+    });
   }
 
   private loadData() {
-    fetch('https://osteo-server-app.onrender.com/api/navigations')
-      .then(response => response.json())
-      .then(data => {
+    const url = 'https://api.osteomedica-toenisvorst.de/getJSON.php?table=navigations';
+    this.http.get<{ data: any[] }>(url).subscribe({
+      next: (data) => {
         if (data && data.data && Array.isArray(data.data) && data.data[0]) {
           this.dataJson = data.data[0];
-          
         } else {
-          console.warn("Unerwartete Datenstruktur, Fallback wird verwendet.");
-         // this.dataJson = this.defaultData;
+          console.log("Unerwartete Datenstruktur, Fallback wird verwendet.");
+          this.loadDefaultData();
         }
-      })
-      .catch(error => {
-        console.error("Fehler beim Laden der Daten:", error);
-        //this.dataJson = this.defaultData;
-      });
+      },
+      error: (error) => {
+        console.log("Fehler beim Laden der Daten:", error);
+        this.loadDefaultData();
+      }
+    });
   }
 }

@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Block1": "Home",
+            "Block2": "Leistungen",
+            "Block3": "Preise",
+            "Block4": "Team",
+            "Block5": "Kontakt" 
+        }
+    ]
+}

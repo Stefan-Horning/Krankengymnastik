@@ -100,5 +100,40 @@ export class ContactComponent implements OnInit{
           });
     }
     }
-    
+
+
+
+  dataJson: { [key: string]: any } = {};
+
+  constructor() {
+    //this.loadDefaultData();
+    this.loadData();
+  }
+
+  loadDefaultData() {
+    this.http.get<{ data: any[] }>('./assets/kontakt-pages.json').subscribe(data => {
+      this.dataJson = data.data[0];
+    });
+  }
+
+
+  
+
+  private loadData() {
+    const url = 'https://api.osteomedica-toenisvorst.de/getJSON.php?table=kontakt-pages';
+    this.http.get<{ data: any[] }>(url).subscribe({
+      next: (data) => {
+        if (data && data.data && Array.isArray(data.data) && data.data[0]) {
+          this.dataJson = data.data[0];
+        } else {
+          console.log("Unerwartete Datenstruktur, Fallback wird verwendet.");
+          this.loadDefaultData();
+        }
+      },
+      error: (error) => {
+        console.log("Fehler beim Laden der Daten:", error);
+        this.loadDefaultData();
+      }
+    });
+  }
 }

@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Ueberschrift": "Zum",
+            "UeberschriftStyle": "Kontakt",
+            "ErsterTextBlock": "Fragen? Anregungen? Wir sind hier, um zu helfen!",
+            "DritterTextBlock": "Wir freuen uns darauf, von dir zu h\u00f6ren!",
+            "Button": "Weiter zum Kontaktformular",
+            "Telefonnummer": "02151-9424700",
+            "ZweiterTextBlock1": "Ruf uns an unter",
+            "ZweiterTextBlock2": "oder schreib uns \u00fcber unser Kontaktformular."
+        }
+    ]
+}

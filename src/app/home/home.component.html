@@ -42,7 +42,7 @@
                 <app-stefan-pre style="width: 100%; "></app-stefan-pre>
             </div> -->
             <div class="NEWWRAPPER">
-                <div *ngFor="let item of dataJson['TeamAnzeige']; let i = index" class="item-container" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
+                <div *ngFor="let item of names; let i = index" class="item-container" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
                   <div class="item-content">
                     <div class="fade-up-box">
                       <img class="person-image" [src]="'./assets/img/people/' + item.name.split(' ')[0] + '.webp'" alt="{{ item.name }}">
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="icon"></div>
                             <div class="description">
-                                <h4 *ngIf="dataJson['Leistungen'] && dataJson['Leistungen'][0]">{{dataJson["Leistungen"][0]}}</h4>
+                                <h4 *ngIf="text && text[0]">{{text[0]['name']}}</h4>
                             </div>
                         </div>
                     </label>
@@ -88,7 +88,7 @@
                         <div class="row">
                             <div class="icon"></div>
                             <div class="description">
-                                <h4 *ngIf="dataJson['Leistungen'] && dataJson['Leistungen'][1]">{{dataJson["Leistungen"][1]}}</h4>
+                                <h4 *ngIf="text && text[1]">{{text[1]['name']}}</h4>
                             </div>
                         </div>
                     </label>
@@ -97,7 +97,7 @@
                         <div class="row">
                             <div class="icon"></div>
                             <div class="description">
-                                <h4 *ngIf="dataJson['Leistungen'] && dataJson['Leistungen'][2]">{{dataJson["Leistungen"][2]}}</h4>
+                                <h4 *ngIf="text && text[2]">{{text[2]['name']}}</h4>
                             </div>
                         </div>
                     </label>

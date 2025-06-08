@@ -1,5 +1,5 @@
 <div class="welcomeText">
-    <h3 style="width: 100%;">{{dataJson["Ueberschrift"]}} <b><span>{{dataJson["UeberschriftStyle"]}}</span></b></h3>
+    <h3 *ngIf="!priceComp" style="width: 100%;">{{dataJson["Ueberschrift"]}} <b><span>{{dataJson["UeberschriftStyle"]}}</span></b></h3>
     
     <div class="price-list" style="padding-top: 16px;">
         <div class="price-item" *ngFor="let item of priceList">
@@ -8,7 +8,7 @@
         </div>
       </div>
     <div class="TeamButton" style="padding-top: 50px;">
-        <a aria-label="Preis-Seite" routerLink="/preise">{{ dataJson["Button"] }}</a>
+        <a *ngIf="!priceComp" aria-label="Preis-Seite" routerLink="/preise">{{ dataJson["Button"] }}</a>
     </div>
     
 </div>

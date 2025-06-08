@@ -1,5 +1,5 @@
 <div class="overdiv">
-    <h3>Unser <span>Team</span></h3>
+    <h3>{{dataJson['Ueberschrift']}} <span>{{dataJson['UeberschriftStyle']}}</span></h3>
     <div *ngFor="let item of text; let i = index" style="padding-top: 25px; padding-bottom: 25px;">
         <div class="imageDiv" [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}">
             <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
@@ -11,9 +11,11 @@
           
             <div class="text" style="font-weight: 200; width: 100%;">
               <h3 style="text-align: left;">{{ item.header }}</h3>
-              <div *ngFor="let training of item.trainings">
-                <span [innerHTML]="training"></span> <br>
-            </div>
+              <ng-container *ngFor="let training of trainings; let tIdx = index">
+                <div *ngIf="i + 1 == training['mitarbeiter_id']">
+                  <span [innerHTML]="training['training']"></span> <br>
+                </div>
+              </ng-container>
         </div>
     </div>
 </div>
@@ -25,21 +27,21 @@
 </div>
 <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 20px;">
     <div class="welcomeText">
-        <h3 style="width: 100%;">Wir suchen <b><span>Mitarbeiter</span></b></h3>
+        <h3 style="width: 100%;">{{dataJson["MitarbeiterSuchenUeberschrift"]}} <b><span>{{dataJson["MitarbeiterSuchenUeberschriftStyle"]}}</span></b></h3>
         <div class="imageDiv">
             
             <div class="text" style="font-weight: 200; text-align: center;" >
-                <span>Möchtest du zu unserm Team gehören?</span>
+                <span>{{dataJson["Block1Text1"]}}</span>
                 <br>
-                <span>Bewirb dich gerne unter <a aria-label="E-Mail-Adresse" style="color: rgb(50, 100, 50);" href="mailto:info@osteomedica-toenisvorst.de">info&#64;osteomedica-toenisvorst.de</a> oder schreib uns über unser Kontaktformular.</span>
+                <span>{{dataJson["Block2Text1"]}} <a aria-label="E-Mail-Adresse" style="color: rgb(50, 100, 50);" href="mailto:{{dataJson['block2Link']}}">{{dataJson["block2Link"]}}</a> {{dataJson["Block2Text3"]}}</span>
                 <br>
-                <span>Wir freuen uns darauf, von dir zu hören!</span>
+                <span>{{dataJson["Block3Text1"]}}</span>
                 <br>
             </div>
         </div>
         
         <div class="TeamButton" style="padding-top: 50px;">
-            <a aria-label="Kontakt-Seite" routerLink="/kontakt">Weiter zum Kontaktformular</a>
+            <a aria-label="Kontakt-Seite" routerLink="/kontakt">{{dataJson["Button"]}}</a>
         </div>
         
       </div>

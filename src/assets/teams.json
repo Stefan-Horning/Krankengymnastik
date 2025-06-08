@@ -1,0 +1,75 @@
+{
+    "data": [
+        {
+            "Ueberschrift": "Unser",
+            "UeberschriftStyle": "Team",
+            "Mitarbeiter": [
+                {
+                    "name": "Stefan Paul",
+                    "header": "Osteopath, Physiotherapeut, Heilpraktiker",
+                    "trainings": [
+                        "Ausbildung zum Physiotherapeuten am Pr\u00e4ha Lehrinstitut f\u00fcr Physiotherapie Kerpen mit Abschluss Staatl. Gepr\u00fcft. Physiotherapeut im September 2007",
+                        "Studium an der Hogeschool Zuyd Heerlen mit Abschluss Bachelor in Physiotherapy (NL) im September 2008",
+                        "Ausbildung in Osteopathie an der International Academy of Osteopathy in Gent (B) Abschluss D.O. in 2014",
+                        "Sektoraler Heilpraktiker (Physiotherapie) seit 2014",
+                        "Unbeschr\u00e4nkter Heilpraktiker seit Mai 2017"
+                    ]
+                },
+                {
+                    "name": "Nicolas Mainz",
+                    "header": "Physiotherapeut, Osteopath, Lymph- und \u00d6demtherapeut",
+                    "trainings": [
+                        "Sechsj\u00e4hrige Ausbildung zum Physiotherapeuten an der Westfalenakademie in Dortmund mit Abschluss in 2009 Staatl. Gepr\u00fcft. Physiotherapeut im Oktober 2010",
+                        "Ausbildung in Osteopathie an der Still-Academy in Oberhausen mit Abschluss in 2018",
+                        "Weiterbildung zum Lymph- und \u00d6demtherapeut nach Asdonk mit Abschluss in 2018"
+                    ]
+                },
+                {
+                    "name": "Julia Mainz",
+                    "header": "Physiotherapeutin, Lymph- und \u00d6demtherapeutin",
+                    "trainings": [
+                        "Ausbildung zur Staatl. Gepr\u00fcft. Gymnastiklehrerin an der Weber Schule in D\u00fcsseldorf mit Abschluss im Juni 1998",
+                        "Ausbildung zur Physiotherapeutin bei maxQ. im BfW in Essen mit Abschluss Staatl. Gepr\u00fcft.  Physiotherapeutin im Oktober 2008",
+                        "Zertifikatsfortbildung in Lymph- und \u00d6demtherapie an der Asdonk Schule Essen in 2009",
+                        "Fortbildung in Ger\u00e4tegest\u00fctzter Krankengymnastik - KGG im Mai 2009"
+                    ]
+                },
+                {
+                    "name": "Philip Heinrichs",
+                    "header": "Physiotherapeut",
+                    "trainings": [
+                        "Ausbildung zum Physiotherapeuten an der Schule f\u00fcr Physiotherapie am EVK D\u00fcsseldorf mit Abschluss Staatl. Gepr\u00fcft. Physiotherapeut in 2021",
+                        "Fortbildung Kinesiologisches Tapen - Kompaktkurs in 2019",
+                        "Fortbildung Functional Kinetics nach Dr. Klein-Vogelbach an der Uni Basel (Kurse Basic + Status) in 2019",
+                        "Zertifikatsfortbildung Manuelle Lymphdrainage\/Komplexe Physikalische Entstauungstherapie in 2021",
+                        "Anbieterqualifikation des Leitfadens Pr\u00e4vention in 2021",
+                        "Zertifikatsfortbildung Ger\u00e4tegest\u00fctzte Krankengymnastik - KGG in 2023",
+                        "Esports Health and Performance Institute - EHPI Foundation + EHPI Medical (seit 04\/23 anerkannter EHPI-M Expert)"
+                    ]
+                },
+                {
+                    "name": "Ulla M\u00fcgge",
+                    "header": "Physiotherapeutin",
+                    "trainings": [
+                        "Ausbildung zur Physiotherapeutin an der Professor-Greve Schule in Bad Iburg von 1985-1987, Examen und Anerkennungsjahr im Klinikum Reinkenheide in Bremerhaven, staatliche Anerkennung seit 1.4.1988",
+                        "Zertifikatsfortbildung Bobath-Konzept f\u00fcr Erwachsene in Wijchen (NL) in 1999",
+                        "Zertifikatsfortbildung in Manueller Therapie in 2004",
+                        "Zertifikatsfortbildung in Manueller Lymphdrainage nach Dr. Vodder in 2007",
+                        "Fortbildung Sanfter Chiropraktik nach Mutzhas in 2011",
+                        "Fortbildung CMD (Craniomandibul\u00e4re Dysfunktion) in 2013",
+                        "Fortbildung Palliativ Care f\u00fcr Physiotherapeuten in 2017",
+                        "Weitere Fortbildungen in den Bereichen: Medizinische Trainingstherapie MTT, Beckenbodentraining, Vestibulartraining, Akupressur, Fu\u00dfreflexzonentherapie, Atemtherapie, Kinesiotape"
+                    ]
+                }
+            ],
+            "MitarbeiterSuchenUeberschrift": "Wir suchen",
+            "MitarbeiterSuchenUeberschriftStyle": "Mitarbeiter",
+            "Block1Text1": "M\u00f6chtest du zu unserm Team geh\u00f6ren?\n",
+            "Block2Text1": "Bewirb dich gerne unter ",
+            "block2Link": "info@osteomedica-toenisvorst.de",
+            "Block2Text3": "oder schreib uns \u00fcber unser Kontaktformular.",
+            "Block3Text1": "Wir freuen uns darauf, von dir zu h\u00f6ren!",
+            "Button": "Weiter zum Kontaktformular"
+        }
+    ]
+}

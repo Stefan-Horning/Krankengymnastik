@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Ueberschrift": "Zum",
+            "UeberschriftStyle": "Kontakt",
+            "Block1Text1": "Fragen? Anregungen? Wir sind hier, um zu helfen!",
+            "Block2Text1": "Ruf uns an unter",
+            "Block2Text3": "oder schreib uns \u00fcber unser Kontaktformular.",
+            "Block3Text1": "Wir freuen uns darauf, von dir zu h\u00f6ren!",
+            "Button": "Nachricht senden",
+            "AdresseUeberschrift": "Unsere",
+            "AdresseUeberschriftStyle": "Adresse",
+            "Adresse": "Ludwig-Jahn-Str. 8 47918 T\u00f6nisvorst",
+            "block2Telefonnummer": "02151-9424700"
+        }
+    ]
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -6,7 +7,7 @@ import 'aos/dist/aos.css';
 @Component({
   selector: 'app-contact-pre',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,HttpClientModule],
   templateUrl: './contact-pre.component.html',
   styleUrl: './contact-pre.component.scss'
 })
@@ -17,18 +18,10 @@ export class ContactPreComponent {
     });
   }
 
+  http = inject(HttpClient)
+
   dataJson: { [key: string]: any } = {};
 
-  private readonly defaultData = {
-    Ueberschrift: "Zum",
-    UeberschriftStyle: "Kontakt",
-    ErsterTextBlock: "Fragen? Anregungen? Wir sind hier, um zu helfen!",
-    ZweiterTextBlock1: "Ruf uns an unter",
-    ZweiterTextBlock2: "oder schreib uns über unser Kontaktformular.",
-    DritterTextBlock: "Wir freuen uns darauf, von dir zu hören!",
-    Button: "Weiter zum Kontaktformular",
-    Telefonnummer: "02151-9424700"
-  };
 
 
   ngAfterViewInit(){
@@ -38,24 +31,32 @@ export class ContactPreComponent {
   }
 
   constructor() {
+    //this.loadDefaultData();
     this.loadData();
   }
 
+  loadDefaultData() {
+    this.http.get<{ data: any[] }>('./assets/kontakt-previews.json').subscribe(data => {
+      this.dataJson = data.data[0];
+    });
+  }
+
+
   private loadData() {
-    fetch('https://osteo-server-app.onrender.com/api/kontakt-previews')
-      .then(response => response.json())
-      .then(data => {
+    const url = 'https://api.osteomedica-toenisvorst.de/getJSON.php?table=kontakt-previews';
+    this.http.get<{ data: any[] }>(url).subscribe({
+      next: (data) => {
         if (data && data.data && Array.isArray(data.data) && data.data[0]) {
           this.dataJson = data.data[0];
-          
         } else {
-          console.warn("Unerwartete Datenstruktur, Fallback wird verwendet.");
-          this.dataJson = this.defaultData;
+          console.log("Unerwartete Datenstruktur, Fallback wird verwendet.");
+          this.loadDefaultData();
         }
-      })
-      .catch(error => {
-        console.error("Fehler beim Laden der Daten:", error);
-        this.dataJson = this.defaultData;
-      });
+      },
+      error: (error) => {
+        console.log("Fehler beim Laden der Daten:", error);
+        this.loadDefaultData();
+      }
+    });
   }
 }

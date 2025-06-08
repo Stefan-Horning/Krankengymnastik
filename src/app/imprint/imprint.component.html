@@ -2,14 +2,14 @@
     <div class="welcomeText div-overdiv" style="padding-top: 80px; text-align: center;">
         <h3>Impressum</h3>
 
-    <p>Stefan Paul<br>
-    Ludwig-Jahn-Str. 8<br>
-    47918 Tönisvorst</p>
+    <p>{{dataJson["Name"]}}<br>
+    {{ dataJson["StrasseHausnummer"]}} <br>
+    {{ dataJson["PLZStadt"]}}</p>
 
     <h4>Kontakt</h4>
-    <p>Telefon: +49 (0) 2151 9424700<br>
-    Telefax: +49 (0) 2151 9424172<br>
-    E-Mail: <a aria-label="E-Mail-Adresse" href="mailto:info@osteomedica-toenisvorst.de">info&#64;osteomedica-toenisvorst.de</a></p>
+    <p>Telefon: {{dataJson["Telefonnummer"]}}<br>
+    Telefax: {{dataJson["FaxNummer"]}}<br>
+    E-Mail: <a aria-label="E-Mail-Adresse" href="mailto:{{dataJson['EMail']}}">{{dataJson['EMail']}}</a></p>
 
     <h4>Aufsichtsbehörde</h4>
     <p>Kreis Viersen Gesundheitsamt<br>

@@ -1,35 +1,35 @@
 <div class="overdiv">
     <div class="welcomeText">
-        <h3>Unsere <span style="font-weight: 500;">Leistungen</span></h3>
+        <h3>{{dataJson["Ueberschrift"]}} <span style="font-weight: 500;">{{dataJson["UeberschriftStyle"]}}</span></h3>
         <div class="wrap">
             <div class="card" data-aos="fade-up">
                 <img src="./assets/img/Physiotherapie.webp" alt="">
                 <div>
-                    <h4>Physiotherapie</h4>
-                    <span>Ziel einer <b>Physiotherapie</b> ist es Schmerzen zu lindern, Stoffwechsel und Durchblutung zu fördern sowie Beweglichkeit und Kraft zu verbessern.</span>
+                    <h4>{{dataJson["Block1Ueberschrift"]}}</h4>
+                    <span>{{dataJson["Block1Text1"]}} <b>{{dataJson["Block1TextDick"]}}</b> {{dataJson["Block1Text2"]}}</span>
                 </div>
                 <div style="margin: 16px;" class="TeamButton">
-                    <a aria-label="Mehr zu Physiotherapie" routerLink="/physiotherapie">Mehr zu Physiotherapie</a>
+                    <a aria-label="Mehr zu Physiotherapie" routerLink="/physiotherapie">{{dataJson["Block1Button"]}}</a>
                 </div>
             </div>
             <div class="card" data-aos="fade-up">
                 <img src="./assets/img/Osteopathie.webp" alt="">
                 <div>
-                    <h4>Osteopathie</h4>
-                    <span>Ziel der <b>Osteopathie</b> ist die Wiederherstellung einer optimalen körperlichen Funktionsfähigkeit durch die manuelle Beseitigung von Blockaden.</span>
+                    <h4>{{dataJson["Block2Ueberschrift"]}}</h4>
+                    <span>{{dataJson["Block2Text1"]}} <b>{{dataJson["Block2TextDick"]}}</b> {{dataJson["Block2Text2"]}}</span>
                 </div>
                 <div style="margin: 16px;" class="TeamButton">
-                    <a aria-label="Mehr zu Osteopathie" routerLink="/osteopathie">Mehr zu Osteopathie</a>
+                    <a aria-label="Mehr zu Osteopathie" routerLink="/osteopathie">{{dataJson["Block2Button"]}}</a>
                 </div>
             </div>
             <div class="card" data-aos="fade-up">
                 <img src="./assets/img/Naturheilpraxis.webp" alt="">
                 <div>
-                    <h4>Heilkunde</h4>
-                    <span>Die <b>Heilkunde</b> betrachtet den Menschen als Ganzes. So ist das Ziel die Wiederherstellung und Förderung der Selbstheilungskräfte.</span>
+                    <h4>{{dataJson["Block3Ueberschrift"]}}</h4>
+                    <span>{{dataJson["Block3Text1"]}} <b>{{dataJson["Block3TextDick"]}}</b> {{dataJson["Block3Text2"]}}</span>
                 </div>
                 <div style="margin: 16px;" class="TeamButton">
-                    <a aria-label="Mehr zu Heilkunde" routerLink="/heilkunde">Mehr zu Heilkunde</a>
+                    <a aria-label="Mehr zu Heilkunde" routerLink="/heilkunde">{{dataJson["Block3Button"]}}</a>
                 </div>
             </div>
         </div>

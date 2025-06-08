@@ -1,0 +1,65 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Slogan": "Osteopathie, Physiotherapie & Naturheilkunde",
+            "Ort": "St. T\u00f6nis",
+            "Ueberschrift": "Herzlich Willkommen bei ",
+            "UnserTeamUeberschrift": "Unser",
+            "TeamButton": "Werde Teil des Teams",
+            "UnsereLeistungenUeberschrift": "Unsere",
+            "LeistungenButton": "Erfahre mehr dar\u00fcber",
+            "BuerozeitenUeberschrift": "Unsere",
+            "ZeitMontag": "von 09:00 bis 13:00 Uhr",
+            "ZeitDienstag": "von 09:00 bis 13:00 Uhr",
+            "ZeitMittwoch": "von 09:00 bis 13:00 Uhr",
+            "ZeitDonnerstag": "von 09:00 bis 13:00 Uhr",
+            "ZeitFreitag": "von 09:00 bis 13:00 Uhr",
+            "ZeitWochenende": "geschlossen",
+            "ErsterTextBlockUeberschrift": "Bei Osteomedica, der Praxis f\u00fcr Osteopathie, Physiotherapie und Heilkunde im Herzen von St.T\u00f6nis, ist es unser besonderes Anliegen den Menschen nach einem ganzheitlichen Ansatz zu behandeln und seine Beschwerden auf allen Ebenen zu lindern.",
+            "ZweiterTextBlockUeberschrift": "Um den Prozess der Heilung beim Patienten umfassend zu aktivieren, nutzen wir Untersuchungs- und Behandlungstechniken aus dem Bereich der Osteopathie sowie der Naturheilkunde und nehmen auch R\u00fccksicht auf die psychoemotionale und seelische Komponente \u00fcber Behandlungsans\u00e4tze aus dem Bereich der energetischen Heilweisen.",
+            "UnserTeamUeberschriftStyle": "Team",
+            "UnsereLeistungenUeberschriftStyle": "Leistungen",
+            "BuerozeitenUeberschriftStyle": "B\u00fcrozeiten",
+            "TeamAnzeige": [
+
+                {
+                    "id" : 1,
+                    "name": "Stefan Paul"
+                },
+                {
+                    "id" : 2,
+                    "name": "Nicolas Mainz"
+                },
+                {
+                    "id" : 3,
+                    "name": "Julia Mainz"
+                },
+                {
+                    "id" : 4,
+                    "name": "Philip Heinrichs"
+                },
+                {   
+                    "id" : 5,
+                    "name": "Ulla M\u00fcgge"
+                }
+            ],
+            "Leistungen": [
+                {
+                    "id": 1,
+                    "name": "Physiotherapie"
+                },
+                {
+                    "id": 2,
+                    "name": "Osteopathie"
+                },
+                {
+                    "id": 3,
+                    "name": "Heilkunde"
+                }
+            ]
+        }
+    ]
+}
+
+

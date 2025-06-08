@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "Ueberschrift": "Unsere",
+            "UeberschriftStyle": "Leistungen",
+            "Block1Ueberschrift": "Physiotherapie",
+            "Block1Text1": " Ziel einer",
+            "Block1TextDick": "Physiotherapie",
+            "Block1Text2": " ist es Schmerzen zu lindern, Stoffwechsel und Durchblutung zu f\u00f6rdern sowie Beweglichkeit und Kraft zu verbessern.",
+            "Block2Ueberschrift": "Osteopathie",
+            "Block2Text1": "Ziel der",
+            "Block2TextDick": "Osteopathie",
+            "Block2Text2": " ist die Wiederherstellung einer optimalen k\u00f6rperlichen Funktionsf\u00e4higkeit durch die manuelle Beseitigung von Blockaden.",
+            "Block3Ueberschrift": "Heilkunde",
+            "Block3Text1": "Die",
+            "Block3TextDick": "Heilkunde",
+            "Block3Text2": " betrachtet den Menschen als Ganzes. So ist das Ziel die Wiederherstellung und F\u00f6rderung der Selbstheilungskr\u00e4fte.",
+            "Block1Button": "Mehr zu Physiotherapie",
+            "Block2Button": "Mehr zu Osteopathie",
+            "Block3Button": "Mehr zu Heilkunde"
+        }
+    ]
+}
